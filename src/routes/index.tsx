@@ -405,9 +405,9 @@ function Index() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <MapPin size={14} /> Offices
                 </div>
-                <div className="mt-3 font-display text-base sm:text-base text-navy whitespace-nowrap">India</div>
+                <div className="mt-3 font-display text-base sm:text-base text-navy">India</div>
                 <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">
-                  7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001), Uttar Pradesh
+                  Mathura, Uttar Pradesh
                 </p>
               </div>
             </div>
