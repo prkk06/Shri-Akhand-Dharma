@@ -266,65 +266,48 @@ function Index() {
 
       {/* TRIVANANA */}
       <section id="trivanana" className="relative bg-navy text-navy-foreground overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={heritageImg} alt="" width={1400} height={1000} loading="lazy" className="w-full h-full object-cover" />
-        </div>
         <div className="relative section-pad">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="grid lg:grid-cols-12 gap-16 items-center">
-              <div className="lg:col-span-6">
-                <SectionLabel>Project One</SectionLabel>
-                <h2 className="mt-6 font-display text-5xl md:text-6xl text-gold tracking-wide">Trivanana</h2>
-                <p className="mt-6 font-display text-xl text-ivory/85 leading-relaxed">
-                  A landmark spiritual, cultural and community destination — reflecting India's diverse dharmic heritage
-                  within one integrated environment.
-                </p>
-                <p className="mt-6 text-ivory/75 leading-relaxed">
-                  Envisioned as the flagship initiative of Shri Akhand Dharma Trust in Uttar Pradesh, Trivanana
-                  combines spirituality, cultural continuity, charitable service and community participation in a
-                  future-ready institution.
-                </p>
+          <div className="mx-auto max-w-5xl px-6 lg:px-10">
+            <div className="text-center">
+              <SectionLabel><span className="mx-auto">Project One</span></SectionLabel>
+              <h2 className="mt-6 font-display text-5xl md:text-6xl text-gold tracking-wide">Trivanana</h2>
+              <p className="mt-6 font-display text-xl text-ivory/85 leading-relaxed max-w-3xl mx-auto">
+                A landmark spiritual, cultural and community destination — reflecting India's diverse dharmic heritage
+                within one integrated environment.
+              </p>
+              <p className="mt-6 text-ivory/75 leading-relaxed max-w-3xl mx-auto">
+                Envisioned as the flagship initiative of Shri Akhand Dharma Trust in Uttar Pradesh, Trivanana
+                combines spirituality, cultural continuity, charitable service and community participation in a
+                future-ready institution.
+              </p>
+            </div>
 
-                <ul className="mt-10 space-y-4">
-                  {[
-                    "A centre for spiritual reflection and cultural learning",
-                    "A platform for community engagement and social impact",
-                    "A destination for heritage preservation and cultural tourism",
-                    "A sustainable institution supported by modern infrastructure",
-                    "A symbol of unity across traditions and generations",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-4 text-ivory/85">
-                      <span className="mt-2 h-px w-6 bg-gold flex-none" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="lg:col-span-6">
-                <div className="relative">
-                  <div className="absolute -inset-4 border border-gold/40 rounded-lg" />
-                  <img
-                    src={trivananaImg}
-                    alt="Trivanana campus rendering"
-                    width={1600}
-                    height={1100}
-                    loading="lazy"
-                    className="relative rounded-lg shadow-[var(--shadow-elegant)] w-full h-auto"
-                  />
+            <ul className="mt-12 space-y-4 max-w-2xl mx-auto">
+              {[
+                "A centre for spiritual reflection and cultural learning",
+                "A platform for community engagement and social impact",
+                "A destination for heritage preservation and cultural tourism",
+                "A sustainable institution supported by modern infrastructure",
+                "A symbol of unity across traditions and generations",
+              ].map((item) => (
+                <li key={item} className="flex gap-4 text-ivory/85">
+                  <span className="mt-2 h-px w-6 bg-gold flex-none" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-12 grid grid-cols-3 gap-6 text-center max-w-2xl mx-auto">
+              {[
+                { k: "1", v: "Flagship Campus" },
+                { k: "∞", v: "Generations Served" },
+                { k: "UP", v: "Uttar Pradesh, India" },
+              ].map((s) => (
+                <div key={s.v} className="border-t border-gold/30 pt-4">
+                  <div className="font-display text-3xl text-gold">{s.k}</div>
+                  <div className="text-xs uppercase tracking-widest text-ivory/60 mt-1">{s.v}</div>
                 </div>
-                <div className="mt-8 grid grid-cols-3 gap-6 text-center">
-                  {[
-                    { k: "1", v: "Flagship Campus" },
-                    { k: "∞", v: "Generations Served" },
-                    { k: "UP", v: "Uttar Pradesh, India" },
-                  ].map((s) => (
-                    <div key={s.v} className="border-t border-gold/30 pt-4">
-                      <div className="font-display text-3xl text-gold">{s.k}</div>
-                      <div className="text-xs uppercase tracking-widest text-ivory/60 mt-1">{s.v}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
