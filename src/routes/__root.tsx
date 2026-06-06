@@ -77,12 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Shri Akhand Dharma Trust — Preserving Heritage. Serving Humanity." },
+      { title: "Shri Akhand Dharma Trust" },
       { name: "description", content: "Shri Akhand Dharma Trust is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
-      { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { property: "og:description", content: "Shri Akhand Dharma Trust is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Shri Akhand Dharma Trust" },
+      { name: "twitter:description", content: "Shri Akhand Dharma Trust is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
