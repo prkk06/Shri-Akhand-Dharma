@@ -442,9 +442,6 @@ function Index() {
               <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
                 Trust Registration No.: <span className="text-gold">161/2026-27</span>
               </p>
-              <p className="mt-2 text-ivory/60 text-[13px] sm:text-xs leading-relaxed">
-                Regd. Office: 7, Old Income Tax Office Compound,<br />Brij Nagar, Mathura (281001), Uttar Pradesh, India
-              </p>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
