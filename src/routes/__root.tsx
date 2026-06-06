@@ -86,6 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Shri Akhand Dharma Trust" },
       { name: "twitter:description", content: "Shri Akhand Dharma Trust is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f4fbb7c4-2bd3-4ccc-add2-658535747d65/id-preview-3cbf846b--97637d65-c14a-40c6-9527-c47c257f7d2f.lovable.app-1780709743580.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f4fbb7c4-2bd3-4ccc-add2-658535747d65/id-preview-3cbf846b--97637d65-c14a-40c6-9527-c47c257f7d2f.lovable.app-1780709743580.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
