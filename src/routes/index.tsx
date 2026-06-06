@@ -428,7 +428,7 @@ function Index() {
                 A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
               </p>
               <p className="mt-4 text-ivory/60 text-xs">
-                Trust Registration No.: <span className="text-gold">[To be updated]</span>
+                Trust Registration No.: <span className="text-gold">161/2026-27</span>
               </p>
               <p className="mt-2 text-ivory/60 text-xs leading-relaxed">
                 Regd. Office: 7, Old Income Tax Office Compound,<br />Brij Nagar, Mathura (281001), Uttar Pradesh, India
