@@ -23,7 +23,6 @@ const nav = [
   { label: "About", href: "#about" },
   { label: "Vision", href: "#vision" },
   { label: "Values", href: "#values" },
-  { label: "Trivanana", href: "#trivanana" },
   { label: "Partner", href: "#partner" },
   { label: "Contact", href: "#contact" },
 ];
@@ -46,14 +45,6 @@ const partners = [
   "Volunteers & Professionals",
   "Global Indian Communities",
   "Technology & Infrastructure Partners",
-];
-
-const trivananaPoints = [
-  "A centre for spiritual reflection and cultural learning",
-  "A platform for community engagement and social impact",
-  "A destination for heritage preservation and cultural tourism",
-  "A sustainable institution supported by modern infrastructure",
-  "A symbol of unity across traditions and generations",
 ];
 
 function SectionLabel({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
