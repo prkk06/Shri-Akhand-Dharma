@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/sadt-banner.jpeg.asset.json";
 import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
