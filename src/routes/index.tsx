@@ -239,7 +239,7 @@ function Index() {
             </h2>
             <div className="mt-6 sm:mt-8 h-px w-16 bg-gold" />
           </div>
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed text-charcoal/85">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
               Shri Akhand Dharma Trust is committed to preserving and strengthening India's spiritual and cultural
               heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other
@@ -265,7 +265,7 @@ function Index() {
             <article className="bg-ivory p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-card)] border-t-4 border-gold">
               <SectionLabel>Our Vision</SectionLabel>
               <h3 className="mt-5 font-display text-2xl sm:text-3xl md:text-4xl text-navy">A Living Heritage</h3>
-              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-sm sm:text-base">
+              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-base sm:text-base">
                 <p>
                   Dedicated to preserving and strengthening India's spiritual heritage by supporting the renovation,
                   development and maintenance of temples, gurudwaras and other religious institutions across the
@@ -280,7 +280,7 @@ function Index() {
             <article className="bg-navy text-navy-foreground p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-elegant)] border-t-4 border-gold">
               <SectionLabel>Our Mission</SectionLabel>
               <h3 className="mt-5 font-display text-2xl sm:text-3xl md:text-4xl text-gold">A Unified Platform</h3>
-              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-sm sm:text-base">
+              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-base sm:text-base">
                 <p>
                   To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual
                   institutions in one ecosystem — promoting spiritual growth, cultural preservation and community
@@ -302,7 +302,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <SectionLabel center>Principles</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
-            <p className="mt-5 sm:mt-6 text-sm sm:text-base text-charcoal/75 leading-relaxed">
+            <p className="mt-5 sm:mt-6 text-base sm:text-base text-charcoal/75 leading-relaxed">
               Six guiding principles that shape every initiative we undertake and every institution we build.
             </p>
           </div>
@@ -314,7 +314,7 @@ function Index() {
                   <h3 className="font-display text-xl sm:text-2xl text-navy">{v.title}</h3>
                 </div>
                 <div className="mt-4 h-px w-10 bg-gold group-hover:w-20 transition-all duration-500" />
-                <p className="mt-4 sm:mt-5 text-sm sm:text-base text-charcoal/75 leading-relaxed">{v.desc}</p>
+                <p className="mt-4 sm:mt-5 text-base sm:text-base text-charcoal/75 leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -332,7 +332,7 @@ function Index() {
             Why This Initiative Matters
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed text-charcoal/85">
+          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
               India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a
               rapidly changing world, preserving these values while making them accessible to future generations has
@@ -358,7 +358,7 @@ function Index() {
             <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               Partner With Us
             </h2>
-            <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-sm sm:text-base">
+            <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-base sm:text-base">
               The Trust welcomes support and participation from individuals and organisations who share our commitment
               to building institutions that serve society and future generations.
             </p>
@@ -374,7 +374,7 @@ function Index() {
               {partners.map((p, i) => (
                 <div key={p} className="bg-ivory p-5 sm:p-6 flex items-center gap-4">
                   <span className="font-display text-gold text-sm">0{i + 1}</span>
-                  <span className="text-navy font-medium text-sm sm:text-base">{p}</span>
+                  <span className="text-navy font-medium text-base sm:text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -388,7 +388,7 @@ function Index() {
           <SectionLabel center>Get in Touch</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <p className="mt-8 sm:mt-10 text-base sm:text-lg leading-relaxed text-charcoal/85">
+          <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             We welcome conversations, partnerships and support from individuals and organisations who believe in
             preserving heritage, strengthening communities and building meaningful institutions rooted in service and
             dharma.
@@ -402,7 +402,7 @@ function Index() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
-                <div className="mt-3 font-display text-sm sm:text-base text-navy group-hover:text-copper transition-colors whitespace-nowrap">
+                <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors whitespace-nowrap">
                   info@adt.org
                 </div>
               </a>
@@ -410,7 +410,7 @@ function Index() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <MapPin size={14} /> Offices
                 </div>
-                <div className="mt-3 font-display text-sm sm:text-base text-navy whitespace-nowrap">India</div>
+                <div className="mt-3 font-display text-base sm:text-base text-navy whitespace-nowrap">India</div>
                 <p className="mt-2 text-xs text-charcoal/70 leading-relaxed">
                   7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001), Uttar Pradesh
                 </p>
