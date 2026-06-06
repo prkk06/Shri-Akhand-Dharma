@@ -275,7 +275,7 @@ function Index() {
             <article className="bg-navy text-navy-foreground p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-elegant)] border-t-4 border-gold">
               <SectionLabel>Our Mission</SectionLabel>
               <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-gold">A Unified Platform</h3>
-              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-base sm:text-base">
+              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
                   To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual
                   institutions in one ecosystem — promoting spiritual growth, cultural preservation and community
