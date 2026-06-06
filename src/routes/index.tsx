@@ -427,6 +427,12 @@ function Index() {
               <p className="mt-5 text-ivory/70 leading-relaxed text-sm">
                 A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
               </p>
+              <p className="mt-4 text-ivory/60 text-xs">
+                Trust Registration No.: <span className="text-gold">[To be updated]</span>
+              </p>
+              <p className="mt-2 text-ivory/60 text-xs leading-relaxed">
+                Regd. Office: 7, Old Income Tax Office Compound,<br />Brij Nagar, Mathura (281001), Uttar Pradesh, India
+              </p>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
