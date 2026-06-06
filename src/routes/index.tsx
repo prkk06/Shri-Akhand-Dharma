@@ -297,7 +297,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <SectionLabel center>Principles</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
-            <p className="mt-5 sm:mt-6 text-base sm:text-base text-charcoal/75 leading-relaxed">
+            <p className="mt-5 sm:mt-6 text-[17px] sm:text-base text-charcoal/75 leading-relaxed">
               Six guiding principles that shape every initiative we undertake and every institution we build.
             </p>
           </div>
