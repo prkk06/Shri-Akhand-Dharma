@@ -430,7 +430,7 @@ function Index() {
                 <img
                   src={logoImg.url}
                   alt=""
-                  className="w-10 h-10 rounded-full ring-1 ring-gold/40 object-cover"
+                  className="w-40 h-40 rounded-full ring-1 ring-gold/40 object-cover"
                 />
                 <div className="font-display text-sm md:text-base tracking-[0.2em]">
                   SHRI AKHAND DHARMA TRUST
