@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
+import heroBg from "@/assets/hero-sacred-skyline.jpg";
 import ContactForm from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
@@ -172,7 +173,7 @@ function Index() {
           className="absolute inset-0 bg-navy bg-cover bg-center"
           style={{
             backgroundImage:
-              "linear-gradient(180deg, oklch(0.22 0.05 255 / 0.82) 0%, oklch(0.22 0.05 255 / 0.75) 45%, oklch(0.22 0.05 255 / 0.92) 100%), url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=2000&q=80')",
+              `linear-gradient(180deg, oklch(0.22 0.05 255 / 0.82) 0%, oklch(0.22 0.05 255 / 0.75) 45%, oklch(0.22 0.05 255 / 0.92) 100%), url(${heroBg})`,
           }}
         />
 
