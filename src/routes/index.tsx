@@ -316,7 +316,7 @@ function Index() {
         </div>
       </section>
 
-      {/* TRIVANANA section removed */}
+      
 
 
       {/* WHY IT MATTERS */}
