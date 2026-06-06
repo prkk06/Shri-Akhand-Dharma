@@ -182,23 +182,24 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 pt-28 pb-20 sm:pt-32 sm:pb-24 w-full">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[10px] sm:text-xs mb-6 sm:mb-8">
+            <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[11px] sm:text-xs mb-6 sm:mb-8">
               <span className="h-px w-8 bg-gold" />
               <span>Est. for Generations to Come</span>
             </div>
-            <h1 className="font-display text-[2.5rem] leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl tracking-wide">
+            <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl tracking-wide">
               Shri Akhand
               <br />
               <span className="text-gold">Dharma Trust</span>
             </h1>
-            <p className="mt-6 sm:mt-8 font-display text-lg sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
+            <p className="mt-6 sm:mt-8 font-display text-xl sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
               Preserving Heritage. Inspiring Generations. Serving Humanity.
             </p>
-            <p className="mt-5 sm:mt-7 text-sm sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
+            <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
               A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage,
               strengthening communities and supporting humanitarian initiatives through collective participation and
               responsible development.
             </p>
+
             <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
                 href="#vision"
