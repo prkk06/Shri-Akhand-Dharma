@@ -353,7 +353,7 @@ function Index() {
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               Partner With Us
             </h2>
-            <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-base sm:text-base">
+            <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
               The Trust welcomes support and participation from individuals and organisations who share our commitment
               to building institutions that serve society and future generations.
             </p>
