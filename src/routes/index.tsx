@@ -233,7 +233,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-5">
             <SectionLabel>About</SectionLabel>
-            <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
+            <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               About Shri Akhand
               <br className="hidden sm:block" /> Dharma Trust
             </h2>
@@ -264,7 +264,7 @@ function Index() {
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-10">
             <article className="bg-ivory p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-card)] border-t-4 border-gold">
               <SectionLabel>Our Vision</SectionLabel>
-              <h3 className="mt-5 font-display text-2xl sm:text-3xl md:text-4xl text-navy">A Living Heritage</h3>
+              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navy">A Living Heritage</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-base sm:text-base">
                 <p>
                   Dedicated to preserving and strengthening India's spiritual heritage by supporting the renovation,
@@ -279,7 +279,7 @@ function Index() {
             </article>
             <article className="bg-navy text-navy-foreground p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-elegant)] border-t-4 border-gold">
               <SectionLabel>Our Mission</SectionLabel>
-              <h3 className="mt-5 font-display text-2xl sm:text-3xl md:text-4xl text-gold">A Unified Platform</h3>
+              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-gold">A Unified Platform</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-base sm:text-base">
                 <p>
                   To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual
@@ -301,7 +301,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="text-center max-w-2xl mx-auto">
             <SectionLabel center>Principles</SectionLabel>
-            <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
+            <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
             <p className="mt-5 sm:mt-6 text-base sm:text-base text-charcoal/75 leading-relaxed">
               Six guiding principles that shape every initiative we undertake and every institution we build.
             </p>
@@ -311,7 +311,7 @@ function Index() {
               <div key={v.title} className="group bg-ivory p-6 sm:p-8 lg:p-10 hover:bg-beige transition-colors">
                 <div className="flex items-baseline gap-4">
                   <span className="font-display text-gold/70 text-sm">0{i + 1}</span>
-                  <h3 className="font-display text-xl sm:text-2xl text-navy">{v.title}</h3>
+                  <h3 className="font-display font-semibold text-xl sm:text-2xl text-navy">{v.title}</h3>
                 </div>
                 <div className="mt-4 h-px w-10 bg-gold group-hover:w-20 transition-all duration-500" />
                 <p className="mt-4 sm:mt-5 text-base sm:text-base text-charcoal/75 leading-relaxed">{v.desc}</p>
@@ -328,7 +328,7 @@ function Index() {
       <section className="section-pad bg-ivory">
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center">
           <SectionLabel center>Significance</SectionLabel>
-          <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
+          <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
             Why This Initiative Matters
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
@@ -355,7 +355,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
             <SectionLabel>Involvement</SectionLabel>
-            <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
+            <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-base sm:text-base">
@@ -386,7 +386,7 @@ function Index() {
       <section id="contact" className="section-pad bg-ivory">
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center">
           <SectionLabel center>Get in Touch</SectionLabel>
-          <h2 className="mt-5 sm:mt-6 font-display text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
+          <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             We welcome conversations, partnerships and support from individuals and organisations who believe in
