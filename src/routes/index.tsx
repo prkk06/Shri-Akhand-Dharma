@@ -176,12 +176,12 @@ function Index() {
         id="top"
         className="relative min-h-[100svh] flex items-center text-navy-foreground overflow-hidden"
       >
-        <img
-          src={heroImg.url}
-          alt="Shri Akhand Dharma Trust"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 w-full h-full object-cover"
+        <div
+          className="absolute inset-0 bg-navy"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 35%, oklch(0.35 0.08 80 / 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.35 0.08 80 / 0.12) 0%, transparent 50%), linear-gradient(180deg, oklch(0.22 0.05 255 / 0.92) 0%, oklch(0.22 0.05 255 / 0.88) 45%, oklch(0.22 0.05 255 / 0.96) 100%)",
+          }}
         />
         <div
           className="absolute inset-0"
