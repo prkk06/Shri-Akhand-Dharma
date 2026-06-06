@@ -170,8 +170,9 @@ function Index() {
         className="relative min-h-[100svh] flex items-center text-navy-foreground overflow-hidden"
       >
         <div
-          className="absolute inset-0 bg-navy bg-cover bg-center"
+          className="absolute inset-0 bg-navy bg-cover bg-no-repeat"
           style={{
+            backgroundPosition: "center 30%",
             backgroundImage:
               `linear-gradient(180deg, oklch(0.22 0.05 255 / 0.82) 0%, oklch(0.22 0.05 255 / 0.75) 45%, oklch(0.22 0.05 255 / 0.92) 100%), url(${heroBg})`,
           }}
