@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives. Discover Trivanana, our flagship initiative in Uttar Pradesh.",
+          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
