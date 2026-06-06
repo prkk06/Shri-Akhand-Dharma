@@ -309,7 +309,7 @@ function Index() {
                   <h3 className="font-display font-semibold text-xl sm:text-2xl text-navy">{v.title}</h3>
                 </div>
                 <div className="mt-4 h-px w-10 bg-gold group-hover:w-20 transition-all duration-500" />
-                <p className="mt-4 sm:mt-5 text-base sm:text-base text-charcoal/75 leading-relaxed">{v.desc}</p>
+                <p className="mt-4 sm:mt-5 text-[17px] sm:text-base text-charcoal/75 leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
