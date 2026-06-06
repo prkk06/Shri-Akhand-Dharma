@@ -397,7 +397,7 @@ function Index() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
-                <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors whitespace-nowrap">
+                <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors break-all">
                   info@adt.org
                 </div>
               </a>
