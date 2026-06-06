@@ -183,13 +183,6 @@ function Index() {
               "radial-gradient(circle at 20% 35%, oklch(0.35 0.08 80 / 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.35 0.08 80 / 0.12) 0%, transparent 50%), linear-gradient(180deg, oklch(0.22 0.05 255 / 0.92) 0%, oklch(0.22 0.05 255 / 0.88) 45%, oklch(0.22 0.05 255 / 0.96) 100%)",
           }}
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(11,31,58,0.78) 0%, rgba(11,31,58,0.55) 45%, rgba(11,31,58,0.92) 100%)",
-          }}
-        />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 pt-28 pb-20 sm:pt-32 sm:pb-24 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[10px] sm:text-xs mb-6 sm:mb-8">
