@@ -411,7 +411,7 @@ function Index() {
                   <MapPin size={14} /> Offices
                 </div>
                 <div className="mt-3 font-display text-base sm:text-base text-navy whitespace-nowrap">India</div>
-                <p className="mt-2 text-xs text-charcoal/70 leading-relaxed">
+                <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">
                   7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001), Uttar Pradesh
                 </p>
               </div>
@@ -441,19 +441,19 @@ function Index() {
                   SHRI AKHAND DHARMA TRUST
                 </div>
               </div>
-              <p className="mt-5 text-ivory/70 leading-relaxed text-sm">
+              <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
                 A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
               </p>
-              <p className="mt-4 text-ivory/60 text-xs">
+              <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
                 Trust Registration No.: <span className="text-gold">161/2026-27</span>
               </p>
-              <p className="mt-2 text-ivory/60 text-xs leading-relaxed">
+              <p className="mt-2 text-ivory/60 text-[13px] sm:text-xs leading-relaxed">
                 Regd. Office: 7, Old Income Tax Office Compound,<br />Brij Nagar, Mathura (281001), Uttar Pradesh, India
               </p>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
-              <ul className="mt-5 space-y-3 text-ivory/85 text-sm">
+              <ul className="mt-5 space-y-3 text-ivory/85 text-[15px] sm:text-sm">
                 <li className="flex items-start gap-3"><MapPin size={14} className="text-gold flex-none mt-1" /> <span>7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)</span></li>
                 <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@adt.org" className="hover:text-gold break-all">info@adt.org</a></li>
                 <li className="flex items-center gap-3"><Globe size={14} className="text-gold flex-none" /> +91 92174 96213 · +91 96270 77778</li>
@@ -461,7 +461,7 @@ function Index() {
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Navigate</div>
-              <ul className="mt-5 grid grid-cols-2 gap-2 text-ivory/85 text-sm">
+              <ul className="mt-5 grid grid-cols-2 gap-2 text-ivory/85 text-[15px] sm:text-sm">
                 {nav.map((n) => (
                   <li key={n.href}><a href={n.href} className="hover:text-gold">{n.label}</a></li>
                 ))}
