@@ -14,7 +14,6 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
-      { property: "og:image", content: heroImg.url },
     ],
   }),
   component: Index,
