@@ -168,12 +168,13 @@ function Index() {
         className="relative min-h-[100svh] flex items-center text-navy-foreground overflow-hidden"
       >
         <div
-          className="absolute inset-0 bg-navy"
+          className="absolute inset-0 bg-navy bg-cover bg-center"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 35%, oklch(0.35 0.08 80 / 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.35 0.08 80 / 0.12) 0%, transparent 50%), linear-gradient(180deg, oklch(0.22 0.05 255 / 0.92) 0%, oklch(0.22 0.05 255 / 0.88) 45%, oklch(0.22 0.05 255 / 0.96) 100%)",
+              "linear-gradient(180deg, oklch(0.22 0.05 255 / 0.82) 0%, oklch(0.22 0.05 255 / 0.75) 45%, oklch(0.22 0.05 255 / 0.92) 100%), url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=2000&q=80')",
           }}
         />
+
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 pt-28 pb-20 sm:pt-32 sm:pb-24 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[10px] sm:text-xs mb-6 sm:mb-8">
