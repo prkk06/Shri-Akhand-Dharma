@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-temple.jpg";
+import heroImg from "@/assets/sadt-banner.jpeg.asset.json";
+import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
 import trivananaImg from "@/assets/trivanana.jpg";
 import heritageImg from "@/assets/heritage-detail.jpg";
 
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: heroImg.url },
     ],
   }),
   component: Index,
@@ -86,7 +87,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-navy/85 text-navy-foreground border-b border-gold/20">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <Emblem className="w-9 h-9 text-gold" />
+            <img src={logoImg.url} alt="Shri Akhand Dharma Trust emblem" className="w-11 h-11 rounded-full ring-1 ring-gold/40 object-cover" />
             <div className="leading-tight">
               <div className="font-display text-sm tracking-[0.25em]">SHRI AKHAND</div>
               <div className="font-display text-[10px] tracking-[0.4em] text-gold">DHARMA TRUST</div>
@@ -111,8 +112,8 @@ function Index() {
       {/* HERO */}
       <section id="top" className="relative min-h-screen flex items-center text-navy-foreground overflow-hidden">
         <img
-          src={heroImg}
-          alt="Heritage temple complex at sunrise"
+          src={heroImg.url}
+          alt="Shri Akhand Dharma Trust banner"
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
