@@ -99,12 +99,13 @@ function Index() {
               className="w-10 h-10 md:w-11 md:h-11 rounded-full ring-1 ring-gold/40 object-cover flex-none"
             />
             <div className="leading-tight min-w-0">
-              <div className="font-display text-[11px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] truncate">
+              <div className="font-display text-[13px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] truncate">
                 SHRI AKHAND
               </div>
-              <div className="font-display text-[9px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
+              <div className="font-display text-[10px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
                 DHARMA TRUST
               </div>
+
             </div>
           </a>
 
