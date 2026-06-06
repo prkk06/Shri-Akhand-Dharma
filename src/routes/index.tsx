@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
+import ContactForm from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -387,23 +388,34 @@ function Index() {
             preserving heritage, strengthening communities and building meaningful institutions rooted in service and
             dharma.
           </p>
-          <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 gap-4 sm:gap-6 text-left">
-            <a
-              href="mailto:info@akhanddharma.org"
-              className="group p-6 sm:p-8 rounded-lg border border-border bg-card hover:border-gold/60 hover:shadow-[var(--shadow-card)] transition-all"
-            >
-              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
-                <Mail size={14} /> Email
+          <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
+            <div className="lg:col-span-2 space-y-4 sm:space-y-5">
+              <a
+                href="mailto:coolkrish04@gmail.com"
+                className="group block p-6 sm:p-7 rounded-lg border border-border bg-card hover:border-gold/60 hover:shadow-[var(--shadow-card)] transition-all"
+              >
+                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
+                  <Mail size={14} /> Email
+                </div>
+                <div className="mt-3 font-display text-base sm:text-xl text-navy group-hover:text-copper transition-colors break-all">
+                  info@akhanddharma.org
+                </div>
+              </a>
+              <div className="p-6 sm:p-7 rounded-lg border border-border bg-card">
+                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
+                  <MapPin size={14} /> Offices
+                </div>
+                <div className="mt-3 font-display text-base sm:text-xl text-navy">India · United Kingdom</div>
+                <p className="mt-2 text-xs text-charcoal/70 leading-relaxed">
+                  7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001), Uttar Pradesh
+                </p>
               </div>
-              <div className="mt-3 font-display text-lg sm:text-2xl text-navy group-hover:text-copper transition-colors break-all">
-                info@akhanddharma.org
+            </div>
+            <div className="lg:col-span-3 p-6 sm:p-8 rounded-lg border border-border bg-card">
+              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold mb-5 sm:mb-6">
+                <span className="h-px w-6 bg-gold" /> Send a Message
               </div>
-            </a>
-            <div className="p-6 sm:p-8 rounded-lg border border-border bg-card">
-              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
-                <MapPin size={14} /> Offices
-              </div>
-              <div className="mt-3 font-display text-lg sm:text-2xl text-navy">India · United Kingdom</div>
+              <ContactForm />
             </div>
           </div>
         </div>
