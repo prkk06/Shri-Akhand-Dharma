@@ -397,15 +397,15 @@ function Index() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
-                <div className="mt-3 font-display text-base sm:text-xl text-navy group-hover:text-copper transition-colors break-all">
-                  info@akhanddharma.org
+                <div className="mt-3 font-display text-sm sm:text-base text-navy group-hover:text-copper transition-colors whitespace-nowrap">
+                  coolkrish04@gmail.com
                 </div>
               </a>
               <div className="p-6 sm:p-7 rounded-lg border border-border bg-card">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <MapPin size={14} /> Offices
                 </div>
-                <div className="mt-3 font-display text-base sm:text-xl text-navy">India · United Kingdom</div>
+                <div className="mt-3 font-display text-sm sm:text-base text-navy whitespace-nowrap">India · United Kingdom</div>
                 <p className="mt-2 text-xs text-charcoal/70 leading-relaxed">
                   7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001), Uttar Pradesh
                 </p>
