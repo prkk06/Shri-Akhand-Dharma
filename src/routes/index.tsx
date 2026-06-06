@@ -423,14 +423,14 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-14 sm:py-20">
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12 items-start">
-            <div>
-              <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-12 lg:gap-16 items-start">
+            <div className="text-center md:text-left">
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
                 <img
                   src={logoImg.url}
                   alt=""
-                  className="w-40 h-40 rounded-full ring-1 ring-gold/40 object-cover"
+                  className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 rounded-full ring-1 ring-gold/40 object-cover"
                 />
                 <div className="font-display text-sm md:text-base tracking-[0.2em]">
                   SHRI AKHAND DHARMA TRUST
@@ -460,7 +460,7 @@ function Index() {
               </ul>
             </div>
           </div>
-          <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gold/20 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs text-center md:text-left">
+          <div className="mt-10 sm:mt-14 md:mt-16 pt-6 sm:pt-8 border-t border-gold/20 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs text-center md:text-left">
             <div className="font-display tracking-[0.3em] sm:tracking-[0.35em] text-gold">
               FAITH · PEACE · MEANING · CONNECTION
             </div>
