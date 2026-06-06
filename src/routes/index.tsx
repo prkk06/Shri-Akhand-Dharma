@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-temple.jpg";
+import heroImg from "@/assets/sadt-banner.jpeg.asset.json";
+import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
 import trivananaImg from "@/assets/trivanana.jpg";
 import heritageImg from "@/assets/heritage-detail.jpg";
 
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: heroImg.url },
     ],
   }),
   component: Index,
