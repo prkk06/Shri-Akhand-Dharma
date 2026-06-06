@@ -52,9 +52,10 @@ const partners = [
 function SectionLabel({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
   return (
     <div
-      className={`flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[10px] sm:text-xs font-medium ${
+      className={`flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[11px] sm:text-xs font-medium ${
         center ? "justify-center" : ""
       }`}
+
     >
       <span className="h-px w-6 sm:w-8 bg-gold" />
       <span>{children}</span>
