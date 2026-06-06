@@ -265,15 +265,10 @@ function Index() {
             <article className="bg-ivory p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-card)] border-t-4 border-gold">
               <SectionLabel>Our Vision</SectionLabel>
               <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navy">A Living Heritage</h3>
-              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-base sm:text-base">
+              <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
-                  Dedicated to preserving and strengthening India's spiritual heritage by supporting the renovation,
-                  development and maintenance of temples, gurudwaras and other religious institutions across the
-                  country.
-                </p>
-                <p>
-                  The Trust also supports deserving NGOs and charitable organisations engaged in spiritual and social
-                  welfare activities — including child welfare, education and humanitarian causes.
+                  A living heritage, preserved and strengthened through the renovation, development and maintenance
+                  of temples, gurudwaras and sacred institutions — connecting tradition with future generations.
                 </p>
               </div>
             </article>
