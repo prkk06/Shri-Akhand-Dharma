@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/sadt-banner.jpeg.asset.json";
 import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -15,7 +14,6 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
-      { property: "og:image", content: heroImg.url },
     ],
   }),
   component: Index,
@@ -178,18 +176,11 @@ function Index() {
         id="top"
         className="relative min-h-[100svh] flex items-center text-navy-foreground overflow-hidden"
       >
-        <img
-          src={heroImg.url}
-          alt="Shri Akhand Dharma Trust"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-navy"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(11,31,58,0.78) 0%, rgba(11,31,58,0.55) 45%, rgba(11,31,58,0.92) 100%)",
+            backgroundImage:
+              "radial-gradient(circle at 20% 35%, oklch(0.35 0.08 80 / 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.35 0.08 80 / 0.12) 0%, transparent 50%), linear-gradient(180deg, oklch(0.22 0.05 255 / 0.92) 0%, oklch(0.22 0.05 255 / 0.88) 45%, oklch(0.22 0.05 255 / 0.96) 100%)",
           }}
         />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 pt-28 pb-20 sm:pt-32 sm:pb-24 w-full">
