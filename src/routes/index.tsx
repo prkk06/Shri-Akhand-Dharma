@@ -314,57 +314,8 @@ function Index() {
         </div>
       </section>
 
-      {/* TRIVANANA */}
-      <section id="trivanana" className="relative bg-navy text-navy-foreground overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.08] pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, var(--gold) 0%, transparent 40%), radial-gradient(circle at 80% 80%, var(--gold) 0%, transparent 40%)",
-          }}
-        />
-        <div className="relative section-pad">
-          <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
-            <div className="text-center">
-              <SectionLabel center>Flagship Project</SectionLabel>
-              <h2 className="mt-5 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl text-gold tracking-wide">
-                Trivanana
-              </h2>
-              <p className="mt-5 sm:mt-6 font-display text-base sm:text-xl text-ivory/85 leading-relaxed max-w-3xl mx-auto">
-                A landmark spiritual, cultural and community destination — reflecting India's diverse dharmic heritage
-                within one integrated environment.
-              </p>
-              <p className="mt-5 sm:mt-6 text-sm sm:text-base text-ivory/75 leading-relaxed max-w-3xl mx-auto">
-                Envisioned as the flagship initiative of Shri Akhand Dharma Trust in Uttar Pradesh, Trivanana combines
-                spirituality, cultural continuity, charitable service and community participation in a future-ready
-                institution.
-              </p>
-            </div>
+      {/* TRIVANANA section removed */}
 
-            <ul className="mt-10 sm:mt-12 space-y-3 sm:space-y-4 max-w-2xl mx-auto">
-              {trivananaPoints.map((item) => (
-                <li key={item} className="flex gap-4 text-ivory/85 text-sm sm:text-base">
-                  <span className="mt-2.5 h-px w-5 sm:w-6 bg-gold flex-none" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-6 text-center max-w-2xl mx-auto">
-              {[
-                { k: "01", v: "Flagship Campus" },
-                { k: "∞", v: "Generations Served" },
-                { k: "UP", v: "Uttar Pradesh" },
-              ].map((s) => (
-                <div key={s.v} className="border-t border-gold/30 pt-4">
-                  <div className="font-display text-2xl sm:text-3xl text-gold">{s.k}</div>
-                  <div className="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/60 mt-1">{s.v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* WHY IT MATTERS */}
       <section className="section-pad bg-ivory">
