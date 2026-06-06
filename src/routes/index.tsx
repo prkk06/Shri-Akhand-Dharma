@@ -369,7 +369,7 @@ function Index() {
               {partners.map((p, i) => (
                 <div key={p} className="bg-ivory p-5 sm:p-6 flex items-center gap-4">
                   <span className="font-display text-gold text-sm">0{i + 1}</span>
-                  <span className="text-navy font-medium text-base sm:text-base">{p}</span>
+                  <span className="text-navy font-medium text-[17px] sm:text-base">{p}</span>
                 </div>
               ))}
             </div>
