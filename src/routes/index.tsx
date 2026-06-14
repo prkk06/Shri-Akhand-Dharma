@@ -391,7 +391,7 @@ function Index() {
           <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
             <div className="lg:col-span-2 space-y-4 sm:space-y-5">
               <a
-                href="mailto:info@adt.org"
+                href="mailto:info@shriakhanddharmatrust.org"
                 className="group block p-6 sm:p-7 rounded-lg border border-border bg-card hover:border-gold/60 hover:shadow-[var(--shadow-card)] transition-all"
               >
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
