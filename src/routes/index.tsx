@@ -398,7 +398,7 @@ function Index() {
                   <Mail size={14} /> Email
                 </div>
                 <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors break-all">
-                  info@adt.org
+                  info@shriakhanddharmatrust.org
                 </div>
               </a>
               <div className="p-6 sm:p-7 rounded-lg border border-border bg-card">
