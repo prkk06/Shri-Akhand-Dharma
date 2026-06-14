@@ -447,7 +447,7 @@ function Index() {
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
               <ul className="mt-5 space-y-3 text-ivory/85 text-[15px] sm:text-sm">
                 <li className="flex items-start gap-3"><MapPin size={14} className="text-gold flex-none mt-1" /> <span>7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)</span></li>
-                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@adt.org" className="hover:text-gold break-all">info@adt.org</a></li>
+                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@shriakhanddharmatrust.org" className="hover:text-gold break-all">info@shriakhanddharmatrust.org</a></li>
                 <li className="flex items-center gap-3"><Globe size={14} className="text-gold flex-none" /> +91 92174 96213 · +91 96270 77778</li>
               </ul>
             </div>
