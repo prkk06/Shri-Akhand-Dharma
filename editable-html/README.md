@@ -5,7 +5,7 @@ This folder contains a standalone, editable version of the Foundation's one-page
 ## Files
 
 - `index.html` — the full webpage. All CSS is embedded at the top inside a `<style>` block, so there are no external files to manage.
-- `assets/sadt-logo-new.jpeg` — the Foundation logo used in the header and footer.
+- `assets/sadt-logo-ivory.png` — the Foundation logo used in the header and footer (ivory, transparent background).
 - `assets/hero-sacred-skyline.jpg` — the hero background image.
 
 ## How to edit on GitHub
