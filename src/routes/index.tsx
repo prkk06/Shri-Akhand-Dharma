@@ -250,9 +250,9 @@ function Index() {
               education, humanitarian activities and community wellbeing.
             </p>
             <p>
-              With a long-term vision focused on service, heritage preservation and social responsibility, the Trust
-              seeks to create sustainable institutions that positively impact both faith-based communities and society
-              at large.
+              With a long-term vision focused on service, heritage preservation and social responsibility, the
+              Foundation seeks to create sustainable institutions that positively impact both faith-based communities
+              and society at large.
             </p>
           </div>
         </div>
