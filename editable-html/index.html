@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shri Akhand Dharma Foundation — Preserving Heritage. Serving Humanity.</title>
+  <meta name="description" content="A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions." />
+  <meta property="og:title" content="Shri Akhand Dharma Foundation" />
+  <meta property="og:description" content="Preserving Heritage. Inspiring Generations. Serving Humanity." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       EDITABLE HTML VERSION — Shri Akhand Dharma Foundation
+       Team members: edit the text inside the <body> below.
+       Avoid changing anything inside this <style> block unless
+       you know CSS. Colors and layout live here.
+       ============================================================ */
+    :root {
+      --navy: #0B1F3A;
+      --navy-90: rgba(11,31,58,0.92);
+      --navy-75: rgba(11,31,58,0.78);
+      --gold: #C89B3C;
+      --gold-soft: #E0B85A;
+      --ivory: #F7F4EE;
+      --beige: #EFE9DC;
+      --sand: #E7DFCB;
+      --charcoal: #2A2A2A;
+      --charcoal-85: rgba(42,42,42,0.85);
+      --charcoal-75: rgba(42,42,42,0.75);
+      --border: #E4DDCB;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display { font-family: 'Cinzel', serif; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+    @media (min-width: 640px) { .container { padding: 0 2rem; } }
+    @media (min-width: 1024px) { .container { padding: 0 2.5rem; } }
+
+    .section { padding: 4rem 0; }
+    @media (min-width: 768px) { .section { padding: 6rem 0; } }
+
+    .bg-ivory { background: var(--ivory); }
+    .bg-beige { background: var(--beige); }
+    .bg-sand  { background: var(--sand); }
+    .bg-navy  { background: var(--navy); color: var(--ivory); }
+
+    .gold { color: var(--gold); }
+    .navy { color: var(--navy); }
+
+    /* Section label pill */
+    .label {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      color: var(--gold); text-transform: uppercase;
+      letter-spacing: 0.3em; font-size: 11px; font-weight: 500;
+    }
+    .label::before {
+      content: ""; display: inline-block; width: 2rem; height: 1px; background: var(--gold);
+    }
+    .label.center { justify-content: center; }
+    .label.center::after {
+      content: ""; display: inline-block; width: 2rem; height: 1px; background: var(--gold);
+    }
+
+    /* ============================= HEADER ============================= */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: var(--navy-75); color: var(--ivory);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(200,155,60,0.2);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 4rem;
+    }
+    @media (min-width: 768px) { .nav-inner { height: 5rem; } }
+    .brand { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+    .brand img {
+      width: 40px; height: 40px; border-radius: 50%;
+      object-fit: cover; border: 1px solid rgba(200,155,60,0.4);
+      flex: none;
+    }
+    @media (min-width: 768px) { .brand img { width: 44px; height: 44px; } }
+    .brand-text { line-height: 1.1; min-width: 0; }
+    .brand-text .line1 {
+      font-family: 'Cinzel', serif; font-size: 13px;
+      letter-spacing: 0.2em; color: var(--ivory);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .brand-text .line2 {
+      font-family: 'Cinzel', serif; font-size: 10px;
+      letter-spacing: 0.3em; color: var(--gold);
+    }
+    @media (min-width: 640px) {
+      .brand-text .line1 { font-size: 14px; letter-spacing: 0.25em; }
+      .brand-text .line2 { letter-spacing: 0.4em; }
+    }
+
+    .nav-links { display: none; gap: 2rem; font-size: 14px; }
+    .nav-links a:hover { color: var(--gold); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 500;
+      font-size: 14px; transition: background 0.2s, color 0.2s;
+      cursor: pointer; border: none;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { background: var(--gold-soft); }
+    .btn-outline-gold { border: 1px solid rgba(200,155,60,0.6); color: var(--ivory); background: transparent; }
+    .btn-outline-gold:hover { background: rgba(200,155,60,0.1); }
+    .btn-navy { background: var(--navy); color: var(--ivory); }
+    .btn-navy:hover { background: rgba(11,31,58,0.9); }
+    .btn-hidden-mobile { display: none; }
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .btn-hidden-mobile { display: inline-flex; }
+      .menu-toggle { display: none; }
+    }
+    .menu-toggle {
+      background: transparent; border: 0; color: var(--ivory);
+      width: 40px; height: 40px; cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .menu-toggle:hover { color: var(--gold); }
+
+    .mobile-menu { display: none; border-top: 1px solid rgba(200,155,60,0.15); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu nav a {
+      display: block; padding: 0.9rem 0; font-size: 16px;
+      color: rgba(247,244,238,0.9);
+      border-bottom: 1px solid rgba(200,155,60,0.1);
+    }
+    .mobile-menu nav a:last-child { border-bottom: 0; }
+    .mobile-menu .container { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+    .mobile-menu .btn { width: 100%; margin-top: 1.25rem; padding: 0.9rem 1.5rem; }
+
+    /* ============================= HERO ============================= */
+    .hero {
+      position: relative; min-height: 100vh;
+      min-height: 100svh;
+      display: flex; align-items: center;
+      color: var(--ivory); overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-color: var(--navy);
+      background-image:
+        linear-gradient(180deg, rgba(11,31,58,0.82) 0%, rgba(11,31,58,0.75) 45%, rgba(11,31,58,0.92) 100%),
+        url('assets/hero-sacred-skyline.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    .hero-inner {
+      position: relative; width: 100%;
+      padding: 7rem 0 5rem;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.75rem; line-height: 1.05;
+      letter-spacing: 0.02em; font-weight: 700;
+    }
+    @media (min-width: 640px) { .hero h1 { font-size: 4rem; } }
+    @media (min-width: 768px) { .hero h1 { font-size: 5rem; } }
+    @media (min-width: 1024px) { .hero h1 { font-size: 6rem; } }
+    .hero .tagline {
+      font-family: 'Cinzel', serif; font-size: 1.25rem;
+      color: rgba(247,244,238,0.9); margin-top: 1.5rem;
+    }
+    @media (min-width: 768px) { .hero .tagline { font-size: 1.5rem; } }
+    .hero .lede {
+      margin-top: 1.5rem; font-size: 1rem;
+      color: rgba(247,244,238,0.8); max-width: 640px;
+    }
+    @media (min-width: 768px) { .hero .lede { font-size: 1.125rem; } }
+    .hero .cta-row {
+      margin-top: 2rem; display: flex; flex-direction: column;
+      gap: 0.75rem; flex-wrap: wrap;
+    }
+    @media (min-width: 640px) {
+      .hero .cta-row { flex-direction: row; gap: 1rem; margin-top: 3rem; }
+    }
+    .hero .max-w { max-width: 780px; }
+    .hero .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      color: var(--gold); text-transform: uppercase;
+      letter-spacing: 0.3em; font-size: 11px; margin-bottom: 1.5rem;
+    }
+    .hero .eyebrow::before { content: ""; width: 2rem; height: 1px; background: var(--gold); }
+
+    /* ============================= SECTIONS ============================= */
+    h2.section-title {
+      font-family: 'Cinzel', serif; font-weight: 600;
+      color: var(--navy); font-size: 1.875rem; line-height: 1.15;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 640px) { h2.section-title { font-size: 2.25rem; } }
+    @media (min-width: 768px) { h2.section-title { font-size: 3rem; } }
+    h3.card-title {
+      font-family: 'Cinzel', serif; font-weight: 600;
+      color: var(--navy); font-size: 1.5rem; margin-top: 1.25rem;
+    }
+    @media (min-width: 768px) { h3.card-title { font-size: 2rem; } }
+    .rule { width: 4rem; height: 1px; background: var(--gold); margin-top: 1.5rem; }
+    .rule.center { margin-left: auto; margin-right: auto; }
+
+    .about-grid, .partner-grid {
+      display: grid; gap: 2.5rem;
+    }
+    @media (min-width: 1024px) {
+      .about-grid { grid-template-columns: 5fr 7fr; gap: 4rem; align-items: start; }
+      .partner-grid { grid-template-columns: 5fr 7fr; gap: 4rem; }
+    }
+    .prose > p + p { margin-top: 1.25rem; }
+    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85); }
+
+    /* Vision / Mission */
+    .vm-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 1024px) { .vm-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+    .card {
+      padding: 2rem; border-radius: 8px;
+      background: var(--ivory);
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 6px 24px -12px rgba(11,31,58,0.15);
+    }
+    @media (min-width: 768px) { .card { padding: 3rem; } }
+    .card.dark {
+      background: var(--navy); color: var(--ivory);
+      box-shadow: 0 20px 40px -20px rgba(11,31,58,0.5);
+    }
+    .card.dark h3 { color: var(--gold); }
+    .card.dark .prose { color: rgba(247,244,238,0.85); }
+
+    /* Values grid */
+    .values-grid {
+      margin-top: 2.5rem;
+      display: grid; gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    }
+    @media (min-width: 640px) { .values-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .values-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .value-cell {
+      background: var(--ivory); padding: 2rem;
+      transition: background 0.2s;
+    }
+    .value-cell:hover { background: var(--beige); }
+    .value-cell .num { font-family: 'Cinzel', serif; color: rgba(200,155,60,0.7); font-size: 14px; margin-right: 1rem; }
+    .value-cell h3 { font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); display: inline; }
+    @media (min-width: 640px) { .value-cell h3 { font-size: 1.5rem; } }
+    .value-cell .mini-rule { margin-top: 1rem; height: 1px; width: 2.5rem; background: var(--gold); }
+    .value-cell p { margin-top: 1.25rem; font-size: 1.0625rem; color: var(--charcoal-75); }
+
+    /* Why it matters */
+    .why { max-width: 720px; margin: 0 auto; text-align: center; }
+    .quote {
+      font-family: 'Cinzel', serif; font-style: italic;
+      color: var(--navy); border-left: 2px solid var(--gold);
+      padding-left: 1.5rem; text-align: left; max-width: 640px; margin: 0 auto;
+      font-size: 1.125rem;
+    }
+    @media (min-width: 640px) { .quote { font-size: 1.25rem; } }
+
+    /* Partners list */
+    .partners-list {
+      display: grid; gap: 1px; background: rgba(11,31,58,0.15);
+      border: 1px solid rgba(11,31,58,0.15); border-radius: 8px; overflow: hidden;
+    }
+    @media (min-width: 640px) { .partners-list { grid-template-columns: 1fr 1fr; } }
+    .partner-cell {
+      background: var(--ivory); padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .partner-cell .num { font-family: 'Cinzel', serif; color: var(--gold); font-size: 14px; }
+    .partner-cell .name { color: var(--navy); font-weight: 500; }
+
+    /* Contact */
+    .contact { max-width: 960px; margin: 0 auto; text-align: center; }
+    .contact-grid {
+      margin-top: 2.5rem; display: grid; gap: 1.5rem;
+      text-align: left;
+    }
+    @media (min-width: 1024px) { .contact-grid { grid-template-columns: 2fr 3fr; gap: 2rem; } }
+    .contact-card {
+      padding: 1.75rem; border-radius: 8px;
+      border: 1px solid var(--border); background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    a.contact-card:hover { border-color: rgba(200,155,60,0.6); box-shadow: 0 6px 24px -12px rgba(11,31,58,0.15); }
+    .contact-card .cap {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--gold); text-transform: uppercase;
+      letter-spacing: 0.3em; font-size: 11px;
+    }
+    .contact-card .value {
+      margin-top: 0.75rem; font-family: 'Cinzel', serif;
+      font-size: 1rem; color: var(--navy); word-break: break-all;
+    }
+    .contact-card .sub { margin-top: 0.5rem; font-size: 14px; color: var(--charcoal-75); }
+
+    /* Form */
+    form.contact-form label {
+      display: block; font-size: 12px; text-transform: uppercase;
+      letter-spacing: 0.2em; color: var(--charcoal-75); margin-bottom: 0.4rem;
+    }
+    form.contact-form input,
+    form.contact-form textarea {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border: 1px solid var(--border); border-radius: 6px;
+      background: #fff; color: var(--charcoal);
+      font-family: inherit;
+    }
+    form.contact-form textarea { min-height: 120px; resize: vertical; }
+    form.contact-form .field { margin-bottom: 1rem; }
+    form.contact-form button { margin-top: 0.5rem; width: 100%; padding: 0.9rem; }
+
+    /* Footer */
+    footer { background: var(--navy); color: var(--ivory); }
+    .footer-grid {
+      display: grid; gap: 2.5rem; padding: 3rem 0;
+    }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; padding: 5rem 0; gap: 4rem; } }
+    .footer-brand { text-align: center; }
+    @media (min-width: 768px) { .footer-brand { text-align: left; } }
+    .footer-brand-row {
+      display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    }
+    @media (min-width: 640px) { .footer-brand-row { flex-direction: row; gap: 0.75rem; } }
+    .footer-brand-row img {
+      width: 96px; height: 96px; border-radius: 50%;
+      object-fit: cover; border: 1px solid rgba(200,155,60,0.4);
+    }
+    @media (min-width: 640px) { .footer-brand-row img { width: 128px; height: 128px; } }
+    @media (min-width: 1024px) { .footer-brand-row img { width: 160px; height: 160px; } }
+    .footer-brand-row .text .line1,
+    .footer-brand-row .text .line2 {
+      font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.2em;
+    }
+    .footer-brand-row .text .line2 { color: var(--gold); }
+    .footer-tag { margin-top: 1.25rem; color: rgba(247,244,238,0.7); font-size: 14px; }
+    .footer h4 { text-transform: uppercase; letter-spacing: 0.3em; font-size: 12px; color: var(--gold); font-weight: 400; }
+    .footer ul { list-style: none; margin-top: 1.25rem; }
+    .footer ul li { margin-bottom: 0.75rem; font-size: 14px; color: rgba(247,244,238,0.85); }
+    .footer a:hover { color: var(--gold); }
+    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1.25rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(200,155,60,0.2);
+      padding: 1.5rem 0; display: flex; flex-direction: column;
+      align-items: center; gap: 1rem; text-align: center; font-size: 12px;
+    }
+    @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-bottom .motto { font-family: 'Cinzel', serif; letter-spacing: 0.35em; color: var(--gold); }
+    .footer-bottom .copy { color: rgba(247,244,238,0.6); }
+  </style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header id="site-header">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" onclick="closeMenu()">
+      <img src="assets/sadt-logo.jpeg" alt="Shri Akhand Dharma Foundation emblem" />
+      <div class="brand-text">
+        <div class="line1">SHRI AKHAND DHARMA</div>
+        <div class="line2">FOUNDATION</div>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#vision">Vision</a>
+      <a href="#values">Values</a>
+      <a href="#partner">Partner</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#partner" class="btn btn-gold btn-hidden-mobile">Become a Partner</a>
+
+    <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="container">
+      <nav>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#vision" onclick="closeMenu()">Vision</a>
+        <a href="#values" onclick="closeMenu()">Values</a>
+        <a href="#partner" onclick="closeMenu()">Partner</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </nav>
+      <a href="#partner" class="btn btn-gold" onclick="closeMenu()">Become a Partner</a>
+    </div>
+  </div>
+</header>
+
+<!-- =================== HERO =================== -->
+<section id="top" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="max-w">
+      <div class="eyebrow">Est. for Generations to Come</div>
+      <h1>Shri Akhand<br /><span class="gold">Dharma Foundation</span></h1>
+      <p class="tagline">Preserving Heritage. Inspiring Generations. Serving Humanity.</p>
+      <p class="lede">
+        A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage,
+        strengthening communities and supporting humanitarian initiatives through collective participation and
+        responsible development.
+      </p>
+      <div class="cta-row">
+        <a href="#vision" class="btn btn-gold">Explore the Vision</a>
+        <a href="#partner" class="btn btn-outline-gold">Become a Partner</a>
+        <a href="#contact" class="btn" style="color: var(--ivory); background: transparent;">Contact Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ABOUT =================== -->
+<section id="about" class="section bg-ivory">
+  <div class="container about-grid">
+    <div>
+      <div class="label">About</div>
+      <h2 class="section-title">About Shri Akhand<br />Dharma Foundation</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="prose">
+      <p>
+        Shri Akhand Dharma Foundation is committed to preserving and strengthening India's spiritual and cultural
+        heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other
+        religious institutions across the country.
+      </p>
+      <p>
+        The Foundation also supports NGOs and charitable organisations engaged in spiritual development, child welfare,
+        education, humanitarian activities and community wellbeing.
+      </p>
+      <p>
+        With a long-term vision focused on service, heritage preservation and social responsibility, the
+        Foundation seeks to create sustainable institutions that positively impact both faith-based communities
+        and society at large.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== VISION / MISSION =================== -->
+<section id="vision" class="section bg-beige">
+  <div class="container">
+    <div class="vm-grid">
+      <article class="card">
+        <div class="label">Our Vision</div>
+        <h3 class="card-title">A Living Heritage</h3>
+        <div class="prose" style="margin-top:1.5rem;">
+          <p>
+            A living heritage, preserved and strengthened through the renovation, development and maintenance
+            of temples, gurudwaras and sacred institutions — connecting tradition with future generations.
+          </p>
+        </div>
+      </article>
+      <article class="card dark">
+        <div class="label">Our Mission</div>
+        <h3 class="card-title">A Unified Platform</h3>
+        <div class="prose" style="margin-top:1.5rem;">
+          <p>
+            To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual
+            institutions in one ecosystem — promoting spiritual growth, cultural preservation and community
+            engagement.
+          </p>
+          <p>
+            The Foundation seeks to enhance awareness among younger generations, strengthen India's religious heritage
+            and ensure affordable access to spiritual and cultural experiences for all.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CORE VALUES =================== -->
+<section id="values" class="section bg-ivory">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="label center">Principles</div>
+      <h2 class="section-title">Core Values</h2>
+      <p class="prose" style="margin-top:1.5rem;">
+        Six guiding principles that shape every initiative we undertake and every institution we build.
+      </p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-cell">
+        <span class="num">01</span><h3>Faith</h3>
+        <div class="mini-rule"></div>
+        <p>Preserving spiritual traditions and sacred heritage with reverence.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">02</span><h3>Service</h3>
+        <div class="mini-rule"></div>
+        <p>Supporting communities through meaningful charitable initiatives.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">03</span><h3>Unity</h3>
+        <div class="mini-rule"></div>
+        <p>Bringing people, traditions and communities together as one.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">04</span><h3>Heritage</h3>
+        <div class="mini-rule"></div>
+        <p>Protecting India's civilisational and cultural identity for tomorrow.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">05</span><h3>Integrity</h3>
+        <div class="mini-rule"></div>
+        <p>Ensuring transparent, accountable and responsible governance.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">06</span><h3>Sustainability</h3>
+        <div class="mini-rule"></div>
+        <p>Building future-ready institutions with long-term, lasting impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== WHY IT MATTERS =================== -->
+<section class="section bg-ivory">
+  <div class="container why">
+    <div class="label center">Significance</div>
+    <h2 class="section-title">Why This Initiative Matters</h2>
+    <div class="rule center"></div>
+    <div class="prose" style="margin-top:2rem;">
+      <p>
+        India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a
+        rapidly changing world, preserving these values while making them accessible to future generations has
+        become increasingly important.
+      </p>
+      <p>
+        Shri Akhand Dharma Foundation aims to bridge heritage and modernity through sustainable institutions that
+        support spirituality, community wellbeing, education and cultural continuity.
+      </p>
+      <p class="quote">
+        "Designed not only to preserve tradition, but to create meaningful social impact through service,
+        awareness, participation and responsible development."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PARTNER =================== -->
+<section id="partner" class="section bg-sand">
+  <div class="container partner-grid">
+    <div>
+      <div class="label">Involvement</div>
+      <h2 class="section-title">Partner With Us</h2>
+      <p class="prose" style="margin-top:2rem;">
+        The Foundation welcomes support and participation from individuals and organisations who share our commitment
+        to building institutions that serve society and future generations.
+      </p>
+      <a href="#contact" class="btn btn-navy" style="margin-top:2rem;">Start a Conversation →</a>
+    </div>
+    <div>
+      <div class="partners-list">
+        <div class="partner-cell"><span class="num">01</span><span class="name">Philanthropists</span></div>
+        <div class="partner-cell"><span class="num">02</span><span class="name">Corporate CSR Initiatives</span></div>
+        <div class="partner-cell"><span class="num">03</span><span class="name">Community Leaders</span></div>
+        <div class="partner-cell"><span class="num">04</span><span class="name">Spiritual Organisations</span></div>
+        <div class="partner-cell"><span class="num">05</span><span class="name">Architects &amp; Planners</span></div>
+        <div class="partner-cell"><span class="num">06</span><span class="name">Volunteers &amp; Professionals</span></div>
+        <div class="partner-cell"><span class="num">07</span><span class="name">Global Indian Communities</span></div>
+        <div class="partner-cell"><span class="num">08</span><span class="name">Technology &amp; Infrastructure Partners</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section id="contact" class="section bg-ivory">
+  <div class="container contact">
+    <div class="label center">Get in Touch</div>
+    <h2 class="section-title">Connect With Us</h2>
+    <div class="rule center"></div>
+    <p class="prose" style="margin-top:2rem;">
+      We welcome conversations, partnerships and support from individuals and organisations who believe in
+      preserving heritage, strengthening communities and building meaningful institutions rooted in service and
+      dharma.
+    </p>
+
+    <div class="contact-grid">
+      <div>
+        <a class="contact-card" href="mailto:info@shriakhanddharmatrust.org" style="display:block;">
+          <div class="cap">✉ Email</div>
+          <div class="value">info@shriakhanddharmatrust.org</div>
+        </a>
+        <div class="contact-card" style="margin-top:1.25rem;">
+          <div class="cap">◉ Offices</div>
+          <div class="value">India</div>
+          <div class="sub">Mathura, Uttar Pradesh</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="cap"><span style="display:inline-block;width:1.5rem;height:1px;background:var(--gold);"></span> Send a Message</div>
+        <form class="contact-form" style="margin-top:1.5rem;" action="mailto:info@shriakhanddharmatrust.org" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="phone" type="tel" />
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-navy">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <img src="assets/sadt-logo.jpeg" alt="" />
+        <div class="text">
+          <div class="line1">SHRI AKHAND DHARMA</div>
+          <div class="line2">FOUNDATION</div>
+        </div>
+      </div>
+      <p class="footer-tag">A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.</p>
+    </div>
+    <div>
+      <h4>Reach</h4>
+      <ul>
+        <li>◉ 7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)</li>
+        <li>✉ <a href="mailto:info@shriakhanddharmatrust.org">info@shriakhanddharmatrust.org</a></li>
+        <li>☎ +91 92174 96213 · +91 96270 77778</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#partner">Partner</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="motto">FAITH · PEACE · MEANING · CONNECTION</div>
+      <div class="copy">© <span id="year"></span> Shri Akhand Dharma Foundation. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Minimal interactivity — mobile menu + year.
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
