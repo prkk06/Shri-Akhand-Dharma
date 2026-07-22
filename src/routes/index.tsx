@@ -101,12 +101,11 @@ function Index() {
             />
             <div className="leading-tight min-w-0">
               <div className="font-display text-[13px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] truncate">
-                SHRI AKHAND
+                SHRI AKHAND DHARMA
               </div>
               <div className="font-display text-[10px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
-                DHARMA FOUNDATION
+                FOUNDATION
               </div>
-
             </div>
           </a>
 
