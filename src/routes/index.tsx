@@ -8,13 +8,13 @@ import ContactForm from "@/components/ContactForm";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shri Akhand Dharma Trust — Preserving Heritage. Serving Humanity." },
+      { title: "Shri Akhand Dharma Foundation — Preserving Heritage. Serving Humanity." },
       {
         name: "description",
         content:
           "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
       },
-      { property: "og:title", content: "Shri Akhand Dharma Trust" },
+      { property: "og:title", content: "Shri Akhand Dharma Foundation" },
       { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
     ],
   }),
@@ -96,7 +96,7 @@ function Index() {
           <a href="#top" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
             <img
               src={logoImg.url}
-              alt="Shri Akhand Dharma Trust emblem"
+              alt="Shri Akhand Dharma Foundation emblem"
               className="w-10 h-10 md:w-11 md:h-11 rounded-full ring-1 ring-gold/40 object-cover flex-none"
             />
             <div className="leading-tight min-w-0">
@@ -104,7 +104,7 @@ function Index() {
                 SHRI AKHAND
               </div>
               <div className="font-display text-[10px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
-                DHARMA TRUST
+                DHARMA FOUNDATION
               </div>
 
             </div>
@@ -189,7 +189,7 @@ function Index() {
             <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl tracking-wide">
               Shri Akhand
               <br />
-              <span className="text-gold">Dharma Trust</span>
+              <span className="text-gold">Dharma Foundation</span>
             </h1>
             <p className="mt-6 sm:mt-8 font-display text-xl sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
               Preserving Heritage. Inspiring Generations. Serving Humanity.
@@ -235,18 +235,18 @@ function Index() {
             <SectionLabel>About</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               About Shri Akhand
-              <br className="hidden sm:block" /> Dharma Trust
+              <br className="hidden sm:block" /> Dharma Foundation
             </h2>
             <div className="mt-6 sm:mt-8 h-px w-16 bg-gold" />
           </div>
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              Shri Akhand Dharma Trust is committed to preserving and strengthening India's spiritual and cultural
+              Shri Akhand Dharma Foundation is committed to preserving and strengthening India's spiritual and cultural
               heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other
               religious institutions across the country.
             </p>
             <p>
-              The Trust also supports NGOs and charitable organisations engaged in spiritual development, child welfare,
+              The Foundation also supports NGOs and charitable organisations engaged in spiritual development, child welfare,
               education, humanitarian activities and community wellbeing.
             </p>
             <p>
@@ -282,7 +282,7 @@ function Index() {
                   engagement.
                 </p>
                 <p>
-                  The Trust seeks to enhance awareness among younger generations, strengthen India's religious heritage
+                  The Foundation seeks to enhance awareness among younger generations, strengthen India's religious heritage
                   and ensure affordable access to spiritual and cultural experiences for all.
                 </p>
               </div>
@@ -334,7 +334,7 @@ function Index() {
               become increasingly important.
             </p>
             <p>
-              Shri Akhand Dharma Trust aims to bridge heritage and modernity through sustainable institutions that
+              Shri Akhand Dharma Foundation aims to bridge heritage and modernity through sustainable institutions that
               support spirituality, community wellbeing, education and cultural continuity.
             </p>
             <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 text-left max-w-2xl mx-auto">
@@ -354,7 +354,7 @@ function Index() {
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
-              The Trust welcomes support and participation from individuals and organisations who share our commitment
+              The Foundation welcomes support and participation from individuals and organisations who share our commitment
               to building institutions that serve society and future generations.
             </p>
             <a
@@ -433,14 +433,14 @@ function Index() {
                   className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 rounded-full ring-1 ring-gold/40 object-cover"
                 />
                 <div className="font-display text-sm md:text-base tracking-[0.2em]">
-                  SHRI AKHAND DHARMA TRUST
+                  SHRI AKHAND DHARMA FOUNDATION
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
                 A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
               </p>
               <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
-                Trust Registration No.: <span className="text-gold">161/2026-27</span>
+                Foundation Registration No.: <span className="text-gold">161/2026-27</span>
               </p>
             </div>
             <div>
@@ -465,7 +465,7 @@ function Index() {
               FAITH · PEACE · MEANING · CONNECTION
             </div>
             <div className="text-ivory/60">
-              © {new Date().getFullYear()} Shri Akhand Dharma Trust. All rights reserved.
+              © {new Date().getFullYear()} Shri Akhand Dharma Foundation. All rights reserved.
             </div>
           </div>
         </div>
