@@ -431,15 +431,17 @@ function Index() {
                   alt=""
                   className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 rounded-full ring-1 ring-gold/40 object-cover"
                 />
-                <div className="font-display text-sm md:text-base tracking-[0.2em]">
-                  SHRI AKHAND DHARMA FOUNDATION
+                <div className="leading-tight">
+                  <div className="font-display text-sm md:text-base tracking-[0.2em]">
+                    SHRI AKHAND DHARMA
+                  </div>
+                  <div className="font-display text-sm md:text-base tracking-[0.2em] text-gold">
+                    FOUNDATION
+                  </div>
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
                 A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
-              </p>
-              <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
-                Foundation Registration No.: <span className="text-gold">161/2026-27</span>
               </p>
             </div>
             <div>
