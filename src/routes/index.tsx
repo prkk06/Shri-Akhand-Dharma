@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
-import logoImg from "@/assets/sadt-logo.jpeg.asset.json";
+import logoImg from "@/assets/sadt-logo-new.jpeg.asset.json";
 import heroBg from "@/assets/hero-sacred-skyline.jpg";
 import ContactForm from "@/components/ContactForm";
 
