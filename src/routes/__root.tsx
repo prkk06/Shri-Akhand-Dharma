@@ -80,17 +80,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Shri Akhand Dharma Foundation" },
       { name: "description", content: "Shri Akhand Dharma Foundation is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
-      { property: "og:title", content: "Shri Akhand Dharma Foundation" },
-      { property: "og:description", content: "Shri Akhand Dharma Foundation is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Shri Akhand Dharma Foundation" },
-      { name: "twitter:description", content: "Shri Akhand Dharma Foundation is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f4fbb7c4-2bd3-4ccc-add2-658535747d65/id-preview-3cbf846b--97637d65-c14a-40c6-9527-c47c257f7d2f.lovable.app-1780709743580.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f4fbb7c4-2bd3-4ccc-add2-658535747d65/id-preview-3cbf846b--97637d65-c14a-40c6-9527-c47c257f7d2f.lovable.app-1780709743580.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
