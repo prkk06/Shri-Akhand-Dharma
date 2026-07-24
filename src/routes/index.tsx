@@ -263,26 +263,26 @@ function Index() {
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-10">
             <article className="bg-ivory p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-card)] border-t-4 border-gold">
               <SectionLabel>Our Vision</SectionLabel>
-              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navy">A Living Heritage</h3>
+              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navy">A Future of Dignity & Opportunity</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
-                  A living heritage, preserved and strengthened through the renovation, development and maintenance
-                  of temples, gurudwaras and sacred institutions — connecting tradition with future generations.
+                  Our vision is to build a compassionate and sustainable society where every individual has access to
+                  education, healthcare, dignity, and opportunity. A future where communities prosper, nature is protected,
+                  cultural heritage is preserved, and every life is empowered to thrive.
                 </p>
               </div>
             </article>
             <article className="bg-navy text-navy-foreground p-8 sm:p-10 md:p-14 rounded-lg shadow-[var(--shadow-elegant)] border-t-4 border-gold">
               <SectionLabel>Our Mission</SectionLabel>
-              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-gold">A Unified Platform</h3>
+              <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-gold">Enriching Lives, Preserving Heritage</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
-                  To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual
-                  institutions in one ecosystem — promoting spiritual growth, cultural preservation and community
-                  engagement.
+                  Our mission is to enrich lives through education, healthcare, women and child empowerment, environmental
+                  conservation, animal welfare, rural development, skill enhancement, and community welfare.
                 </p>
                 <p>
-                  The Foundation seeks to enhance awareness among younger generations, strengthen India's religious heritage
-                  and ensure affordable access to spiritual and cultural experiences for all.
+                  With compassion, innovation, and a commitment to preserving our cultural heritage, we strive to build a
+                  better future for all.
                 </p>
               </div>
             </article>
