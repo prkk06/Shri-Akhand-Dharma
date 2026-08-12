@@ -314,8 +314,10 @@ function Index() {
             <SectionLabel center>Principles</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
             <p className="mt-5 sm:mt-6 text-[17px] sm:text-base text-charcoal/75 leading-relaxed">
-              Six guiding principles that shape every initiative we undertake and every institution we build.
+              Shri Akhand Dharma Foundation is guided by a strong set of core values that define its mission, actions
+              and long-term vision for serving society with dedication and integrity.
             </p>
+
           </div>
           <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden border border-border">
             {values.map((v, i) => (
