@@ -205,13 +205,15 @@ function Index() {
               <span className="text-gold">Dharma Foundation</span>
             </h1>
             <p className="mt-6 sm:mt-8 font-display text-xl sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
-              Preserving Heritage. Inspiring Generations. Serving Humanity.
+              Empowering lives through faith, service and compassion.
             </p>
             <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
-              A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage,
-              strengthening communities and supporting humanitarian initiatives through collective participation and
-              responsible development.
+              A non-profit organisation dedicated to empowering communities through skill development, education,
+              social welfare and sustainable livelihood initiatives. The Foundation works to promote inclusive growth
+              and improve the quality of life for underprivileged individuals through impactful programmes and
+              partnerships.
             </p>
+
 
             <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
