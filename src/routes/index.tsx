@@ -38,24 +38,30 @@ const nav = [
 ];
 
 const values = [
-  { title: "Faith", desc: "Preserving spiritual traditions and sacred heritage with reverence." },
-  { title: "Service", desc: "Supporting communities through meaningful charitable initiatives." },
-  { title: "Unity", desc: "Bringing people, traditions and communities together as one." },
-  { title: "Heritage", desc: "Protecting India's civilisational and cultural identity for tomorrow." },
-  { title: "Integrity", desc: "Ensuring transparent, accountable and responsible governance." },
-  { title: "Sustainability", desc: "Building future-ready institutions with long-term, lasting impact." },
+  { title: "Compassion", desc: "We serve with empathy and respect for every individual." },
+  { title: "Integrity", desc: "We uphold honesty, transparency and accountability." },
+  { title: "Service", desc: "We are committed to selfless service and social welfare." },
+  { title: "Inclusivity", desc: "We believe in equality and equal opportunities for all." },
+  { title: "Empowerment", desc: "We enable individuals and communities to become self-reliant." },
+  { title: "Sustainability", desc: "We promote responsible practices for lasting social and environmental impact." },
+  { title: "Collaboration", desc: "We work together to create meaningful and enduring change." },
 ];
 
 const partners = [
-  "Philanthropists",
-  "Corporate CSR Initiatives",
+  "Philanthropists & Donors",
+  "Corporate CSR Partners",
+  "Educational Institutions",
+  "Healthcare Partners",
   "Community Leaders",
-  "Spiritual Organisations",
-  "Architects & Planners",
-  "Volunteers & Professionals",
-  "Global Indian Communities",
+  "Environmental Organisations",
+  "Government & Public Sector Bodies",
+  "NGOs & Civil Society Organisations",
   "Technology & Infrastructure Partners",
+  "Volunteers & Skilled Professionals",
+  "Media & Communication Partners",
+  "Global Indian Communities",
 ];
+
 
 function SectionLabel({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
   return (
