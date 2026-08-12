@@ -313,8 +313,10 @@
     }
     .contact-card .value {
       margin-top: 0.75rem; font-family: 'Cinzel', serif;
-      font-size: 1rem; color: var(--navy); word-break: break-all;
+      color: var(--navy); white-space: nowrap;
+      font-size: 0.875rem;
     }
+    @media (min-width: 420px) { .contact-card .value { font-size: 1rem; } }
     .contact-card .sub { margin-top: 0.5rem; font-size: 14px; color: var(--charcoal-75); }
 
     /* Form */
