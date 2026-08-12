@@ -256,19 +256,20 @@ function Index() {
           </div>
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              Shri Akhand Dharma Foundation is committed to preserving and strengthening India's spiritual and cultural
-              heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other
-              religious institutions across the country.
+              Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate,
+              inclusive and sustainable society, guided by the enduring values of humanity, service and integrity.
             </p>
             <p>
-              The Foundation also supports NGOs and charitable organisations engaged in spiritual development, child welfare,
-              education, humanitarian activities and community wellbeing.
+              The Foundation works to uplift underserved communities through impactful initiatives in education,
+              healthcare, poverty alleviation, environmental conservation and social welfare.
             </p>
             <p>
-              With a long-term vision focused on service, heritage preservation and social responsibility, the
-              Foundation seeks to create sustainable institutions that positively impact both faith-based communities
-              and society at large.
+              By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma
+              Foundation is committed to creating meaningful and lasting social impact. Through collaboration,
+              transparency and selfless service, we strive to build a future where every individual can live with
+              dignity, equality and hope.
             </p>
+
           </div>
         </div>
       </section>
