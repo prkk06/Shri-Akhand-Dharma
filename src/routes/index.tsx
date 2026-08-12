@@ -494,7 +494,7 @@ function Index() {
           </div>
           <div className="mt-10 sm:mt-14 md:mt-16 pt-6 sm:pt-8 border-t border-gold/20 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs text-center md:text-left">
             <div className="font-display tracking-[0.3em] sm:tracking-[0.35em] text-gold">
-              FAITH · PEACE · MEANING · CONNECTION
+              FAITH IN VALUES · SERVICE TO HUMANITY · COMMITMENT TO NATION
             </div>
             <div className="text-ivory/60">
               © {new Date().getFullYear()} Shri Akhand Dharma Foundation. All rights reserved.
