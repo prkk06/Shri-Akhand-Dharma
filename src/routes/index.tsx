@@ -419,14 +419,14 @@ function Index() {
           <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
             <div className="lg:col-span-2 space-y-4 sm:space-y-5">
               <a
-                href="mailto:info@shriakhanddharmatrust.org"
+                href="mailto:info@shriakhanddharma.org"
                 className="group block p-6 sm:p-7 rounded-lg border border-border bg-card hover:border-gold/60 hover:shadow-[var(--shadow-card)] transition-all"
               >
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
                 <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors break-all">
-                  info@shriakhanddharmatrust.org
+                  info@shriakhanddharma.org
                 </div>
               </a>
               <div className="p-6 sm:p-7 rounded-lg border border-border bg-card">
@@ -477,7 +477,7 @@ function Index() {
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
               <ul className="mt-5 space-y-3 text-ivory/85 text-[15px] sm:text-sm">
                 <li className="flex items-start gap-3"><MapPin size={14} className="text-gold flex-none mt-1" /> <span>7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)</span></li>
-                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@shriakhanddharmatrust.org" className="hover:text-gold break-all">info@shriakhanddharmatrust.org</a></li>
+                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@shriakhanddharma.org" className="hover:text-gold break-all">info@shriakhanddharma.org</a></li>
                 <li className="flex items-center gap-3"><Globe size={14} className="text-gold flex-none" /> +91 92174 96213 · +91 96270 77778</li>
               </ul>
             </div>
