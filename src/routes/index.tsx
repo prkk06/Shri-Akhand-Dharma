@@ -8,20 +8,21 @@ import ContactForm from "@/components/ContactForm";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shri Akhand Dharma Foundation — Preserving Heritage. Serving Humanity." },
+      { title: "Shri Akhand Dharma Foundation — Empowering Lives Through Service" },
       {
         name: "description",
         content:
-          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
+          "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and sustainable livelihood initiatives across India.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Foundation" },
-      { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { property: "og:description", content: "Empowering lives through faith, service and compassion." },
       { property: "og:url", content: "https://shriakhanddharmatrust.org/" },
       { property: "og:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:title", content: "Shri Akhand Dharma Foundation" },
-      { name: "twitter:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { name: "twitter:description", content: "Empowering lives through faith, service and compassion." },
+
       { name: "twitter:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/" }],
@@ -38,24 +39,30 @@ const nav = [
 ];
 
 const values = [
-  { title: "Faith", desc: "Preserving spiritual traditions and sacred heritage with reverence." },
-  { title: "Service", desc: "Supporting communities through meaningful charitable initiatives." },
-  { title: "Unity", desc: "Bringing people, traditions and communities together as one." },
-  { title: "Heritage", desc: "Protecting India's civilisational and cultural identity for tomorrow." },
-  { title: "Integrity", desc: "Ensuring transparent, accountable and responsible governance." },
-  { title: "Sustainability", desc: "Building future-ready institutions with long-term, lasting impact." },
+  { title: "Compassion", desc: "We serve with empathy and respect for every individual." },
+  { title: "Integrity", desc: "We uphold honesty, transparency and accountability." },
+  { title: "Service", desc: "We are committed to selfless service and social welfare." },
+  { title: "Inclusivity", desc: "We believe in equality and equal opportunities for all." },
+  { title: "Empowerment", desc: "We enable individuals and communities to become self-reliant." },
+  { title: "Sustainability", desc: "We promote responsible practices for lasting social and environmental impact." },
+  { title: "Collaboration", desc: "We work together to create meaningful and enduring change." },
 ];
 
 const partners = [
-  "Philanthropists",
-  "Corporate CSR Initiatives",
+  "Philanthropists & Donors",
+  "Corporate CSR Partners",
+  "Educational Institutions",
+  "Healthcare Partners",
   "Community Leaders",
-  "Spiritual Organisations",
-  "Architects & Planners",
-  "Volunteers & Professionals",
-  "Global Indian Communities",
+  "Environmental Organisations",
+  "Government & Public Sector Bodies",
+  "NGOs & Civil Society Organisations",
   "Technology & Infrastructure Partners",
+  "Volunteers & Skilled Professionals",
+  "Media & Communication Partners",
+  "Global Indian Communities",
 ];
+
 
 function SectionLabel({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
   return (
@@ -199,13 +206,15 @@ function Index() {
               <span className="text-gold">Dharma Foundation</span>
             </h1>
             <p className="mt-6 sm:mt-8 font-display text-xl sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
-              Preserving Heritage. Inspiring Generations. Serving Humanity.
+              Empowering lives through faith, service and compassion.
             </p>
             <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
-              A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage,
-              strengthening communities and supporting humanitarian initiatives through collective participation and
-              responsible development.
+              A non-profit organisation dedicated to empowering communities through skill development, education,
+              social welfare and sustainable livelihood initiatives. The Foundation works to promote inclusive growth
+              and improve the quality of life for underprivileged individuals through impactful programmes and
+              partnerships.
             </p>
+
 
             <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
@@ -248,19 +257,20 @@ function Index() {
           </div>
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              Shri Akhand Dharma Foundation is committed to preserving and strengthening India's spiritual and cultural
-              heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other
-              religious institutions across the country.
+              Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate,
+              inclusive and sustainable society, guided by the enduring values of humanity, service and integrity.
             </p>
             <p>
-              The Foundation also supports NGOs and charitable organisations engaged in spiritual development, child welfare,
-              education, humanitarian activities and community wellbeing.
+              The Foundation works to uplift underserved communities through impactful initiatives in education,
+              healthcare, poverty alleviation, environmental conservation and social welfare.
             </p>
             <p>
-              With a long-term vision focused on service, heritage preservation and social responsibility, the
-              Foundation seeks to create sustainable institutions that positively impact both faith-based communities
-              and society at large.
+              By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma
+              Foundation is committed to creating meaningful and lasting social impact. Through collaboration,
+              transparency and selfless service, we strive to build a future where every individual can live with
+              dignity, equality and hope.
             </p>
+
           </div>
         </div>
       </section>
@@ -305,8 +315,10 @@ function Index() {
             <SectionLabel center>Principles</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
             <p className="mt-5 sm:mt-6 text-[17px] sm:text-base text-charcoal/75 leading-relaxed">
-              Six guiding principles that shape every initiative we undertake and every institution we build.
+              Shri Akhand Dharma Foundation is guided by a strong set of core values that define its mission, actions
+              and long-term vision for serving society with dedication and integrity.
             </p>
+
           </div>
           <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden border border-border">
             {values.map((v, i) => (
@@ -331,23 +343,25 @@ function Index() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center">
           <SectionLabel center>Significance</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
-            Why This Initiative Matters
+            Why These Initiatives Matter
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a
-              rapidly changing world, preserving these values while making them accessible to future generations has
-              become increasingly important.
+              At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
+              integrity and respect for humanity. Our initiatives apply these values through sustainable,
+              community-driven efforts in education, healthcare, environmental care, cultural preservation and social
+              empowerment.
             </p>
             <p>
-              Shri Akhand Dharma Foundation aims to bridge heritage and modernity through sustainable institutions that
-              support spirituality, community wellbeing, education and cultural continuity.
+              By honouring heritage while embracing innovation, we work to build stronger communities and a more
+              inclusive, compassionate and sustainable future.
             </p>
             <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 text-left max-w-2xl mx-auto">
-              "Designed not only to preserve tradition, but to create meaningful social impact through service,
-              awareness, participation and responsible development."
+              "Designed to transform timeless values into meaningful action, creating lasting social impact through
+              community empowerment, sustainable development and selfless service."
             </p>
+
           </div>
         </div>
       </section>
@@ -361,9 +375,10 @@ function Index() {
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
-              The Foundation welcomes support and participation from individuals and organisations who share our commitment
-              to building institutions that serve society and future generations.
+              The Foundation welcomes support and participation from individuals and organisations who share our
+              commitment to build infrastructure, networks and an ecosystem that serve society and future generations.
             </p>
+
             <a
               href="#contact"
               className="mt-8 sm:mt-10 inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-md bg-navy text-navy-foreground font-medium hover:bg-navy/90 transition-colors gap-2"
@@ -375,8 +390,9 @@ function Index() {
             <div className="grid sm:grid-cols-2 gap-px bg-navy/15 border border-navy/15 rounded-lg overflow-hidden">
               {partners.map((p, i) => (
                 <div key={p} className="bg-ivory p-5 sm:p-6 flex items-center gap-4">
-                  <span className="font-display text-gold text-sm">0{i + 1}</span>
+                  <span className="font-display text-gold text-sm">{String(i + 1).padStart(2, "0")}</span>
                   <span className="text-navy font-medium text-[17px] sm:text-base">{p}</span>
+
                 </div>
               ))}
             </div>
@@ -391,21 +407,27 @@ function Index() {
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
-            We welcome conversations, partnerships and support from individuals and organisations who believe in
-            preserving heritage, strengthening communities and building meaningful institutions rooted in service and
-            dharma.
+            At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action.
+            We invite individuals, organisations, corporate partners, educational institutions and development agencies
+            to collaborate with us through volunteering, donations or knowledge sharing for advancing education,
+            healthcare, environmental sustainability and community well-being.
           </p>
+          <p className="mt-5 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
+            Together, we can create sustainable solutions that empower lives and strengthen communities for generations
+            to come.
+          </p>
+
           <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
             <div className="lg:col-span-2 space-y-4 sm:space-y-5">
               <a
-                href="mailto:info@shriakhanddharmatrust.org"
+                href="mailto:info@shriakhanddharma.org"
                 className="group block p-6 sm:p-7 rounded-lg border border-border bg-card hover:border-gold/60 hover:shadow-[var(--shadow-card)] transition-all"
               >
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
                 <div className="mt-3 font-display text-base sm:text-base text-navy group-hover:text-copper transition-colors break-all">
-                  info@shriakhanddharmatrust.org
+                  info@shriakhanddharma.org
                 </div>
               </a>
               <div className="p-6 sm:p-7 rounded-lg border border-border bg-card">
@@ -449,14 +471,16 @@ function Index() {
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
-                A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
+                To drive inclusive and sustainable development through strategic partnerships that create lasting
+                social impact.
               </p>
+
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
               <ul className="mt-5 space-y-3 text-ivory/85 text-[15px] sm:text-sm">
                 <li className="flex items-start gap-3"><MapPin size={14} className="text-gold flex-none mt-1" /> <span>7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)</span></li>
-                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@shriakhanddharmatrust.org" className="hover:text-gold break-all">info@shriakhanddharmatrust.org</a></li>
+                <li className="flex items-center gap-3"><Mail size={14} className="text-gold flex-none" /> <a href="mailto:info@shriakhanddharma.org" className="hover:text-gold break-all">info@shriakhanddharma.org</a></li>
                 <li className="flex items-center gap-3"><Globe size={14} className="text-gold flex-none" /> +91 92174 96213 · +91 96270 77778</li>
               </ul>
             </div>
@@ -471,7 +495,7 @@ function Index() {
           </div>
           <div className="mt-10 sm:mt-14 md:mt-16 pt-6 sm:pt-8 border-t border-gold/20 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs text-center md:text-left">
             <div className="font-display tracking-[0.3em] sm:tracking-[0.35em] text-gold">
-              FAITH · PEACE · MEANING · CONNECTION
+              FAITH IN VALUES · SERVICE TO HUMANITY · COMMITMENT TO NATION
             </div>
             <div className="text-ivory/60">
               © {new Date().getFullYear()} Shri Akhand Dharma Foundation. All rights reserved.

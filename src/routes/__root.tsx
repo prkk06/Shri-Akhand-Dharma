@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Shri Akhand Dharma Foundation" },
-      { name: "description", content: "Shri Akhand Dharma Foundation is a spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives." },
+      { name: "description", content: "Shri Akhand Dharma Foundation is a non-profit organisation empowering communities through education, healthcare, skill development and social welfare initiatives." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

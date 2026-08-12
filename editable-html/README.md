@@ -18,7 +18,7 @@ This folder contains a standalone, editable version of the Foundation's one-page
 ### Editing tips
 
 - Only change the text **between** HTML tags. For example, in `<h2>About Us</h2>`, edit `About Us`, not the `<h2>` tags.
-- To change a link, edit the value inside `href="..."`. Example: `<a href="mailto:info@shriakhanddharmatrust.org">`.
+- To change a link, edit the value inside `href="..."`. Example: `<a href="mailto:info@shriakhanddharma.org">`.
 - To change an image, replace the file in the `assets/` folder with a file that has the exact same name, or update the `src="assets/..."` path.
 - Avoid removing or renaming CSS classes (things like `class="section"`) — they control the layout.
 
