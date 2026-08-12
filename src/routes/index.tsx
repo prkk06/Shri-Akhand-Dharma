@@ -406,10 +406,16 @@ function Index() {
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
-            We welcome conversations, partnerships and support from individuals and organisations who believe in
-            preserving heritage, strengthening communities and building meaningful institutions rooted in service and
-            dharma.
+            At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action.
+            We invite individuals, organisations, corporate partners, educational institutions and development agencies
+            to collaborate with us through volunteering, donations or knowledge sharing for advancing education,
+            healthcare, environmental sustainability and community well-being.
           </p>
+          <p className="mt-5 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
+            Together, we can create sustainable solutions that empower lives and strengthen communities for generations
+            to come.
+          </p>
+
           <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
             <div className="lg:col-span-2 space-y-4 sm:space-y-5">
               <a
