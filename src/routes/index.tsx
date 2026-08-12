@@ -8,20 +8,21 @@ import ContactForm from "@/components/ContactForm";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shri Akhand Dharma Foundation — Preserving Heritage. Serving Humanity." },
+      { title: "Shri Akhand Dharma Foundation — Empowering Lives Through Service" },
       {
         name: "description",
         content:
-          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
+          "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and sustainable livelihood initiatives across India.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Foundation" },
-      { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { property: "og:description", content: "Empowering lives through faith, service and compassion." },
       { property: "og:url", content: "https://shriakhanddharmatrust.org/" },
       { property: "og:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:title", content: "Shri Akhand Dharma Foundation" },
-      { name: "twitter:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { name: "twitter:description", content: "Empowering lives through faith, service and compassion." },
+
       { name: "twitter:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/" }],
