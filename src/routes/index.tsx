@@ -389,8 +389,9 @@ function Index() {
             <div className="grid sm:grid-cols-2 gap-px bg-navy/15 border border-navy/15 rounded-lg overflow-hidden">
               {partners.map((p, i) => (
                 <div key={p} className="bg-ivory p-5 sm:p-6 flex items-center gap-4">
-                  <span className="font-display text-gold text-sm">0{i + 1}</span>
+                  <span className="font-display text-gold text-sm">{String(i + 1).padStart(2, "0")}</span>
                   <span className="text-navy font-medium text-[17px] sm:text-base">{p}</span>
+
                 </div>
               ))}
             </div>
