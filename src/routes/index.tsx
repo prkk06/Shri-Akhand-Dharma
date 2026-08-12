@@ -374,9 +374,10 @@ function Index() {
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
-              The Foundation welcomes support and participation from individuals and organisations who share our commitment
-              to building institutions that serve society and future generations.
+              The Foundation welcomes support and participation from individuals and organisations who share our
+              commitment to build infrastructure, networks and an ecosystem that serve society and future generations.
             </p>
+
             <a
               href="#contact"
               className="mt-8 sm:mt-10 inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-md bg-navy text-navy-foreground font-medium hover:bg-navy/90 transition-colors gap-2"
