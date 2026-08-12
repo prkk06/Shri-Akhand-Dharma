@@ -342,23 +342,25 @@ function Index() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center">
           <SectionLabel center>Significance</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
-            Why This Initiative Matters
+            Why These Initiatives Matter
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a
-              rapidly changing world, preserving these values while making them accessible to future generations has
-              become increasingly important.
+              At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
+              integrity and respect for humanity. Our initiatives apply these values through sustainable,
+              community-driven efforts in education, healthcare, environmental care, cultural preservation and social
+              empowerment.
             </p>
             <p>
-              Shri Akhand Dharma Foundation aims to bridge heritage and modernity through sustainable institutions that
-              support spirituality, community wellbeing, education and cultural continuity.
+              By honouring heritage while embracing innovation, we work to build stronger communities and a more
+              inclusive, compassionate and sustainable future.
             </p>
             <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 text-left max-w-2xl mx-auto">
-              "Designed not only to preserve tradition, but to create meaningful social impact through service,
-              awareness, participation and responsible development."
+              "Designed to transform timeless values into meaningful action, creating lasting social impact through
+              community empowerment, sustainable development and selfless service."
             </p>
+
           </div>
         </div>
       </section>
