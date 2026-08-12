@@ -470,8 +470,10 @@ function Index() {
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
-                A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.
+                To drive inclusive and sustainable development through strategic partnerships that create lasting
+                social impact.
               </p>
+
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
