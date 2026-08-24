@@ -13,13 +13,16 @@ const NOTIFICATION_EMAIL = "info@shriakhanddharma.org";
 // Must be a sender address on a domain you verify in Resend.
 const SENDER_EMAIL = "Foundation Website <contact@shriakhanddharma.org>";
 
+const HTML_ESCAPE: Record<string, string> = {
+  "&": "&",
+  "<": "<",
+  ">": ">",
+  '"': """,
+  "'": "&#39;",
+};
+
 function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&")
-    .replace(/</g, "<")
-    .replace(/>/g, ">")
-    .replace(/"/g, """)
-    .replace(/'/g, "&#39;");
+  return s.replace(/[&<>"']/g, (ch) => HTML_ESCAPE[ch] ?? ch);
 }
 
 export const submitContactForm = createServerFn({ method: "POST" })
