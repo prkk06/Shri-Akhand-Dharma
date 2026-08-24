@@ -56,9 +56,12 @@ export default function ContactForm() {
 
     setSubmitting(true);
     try {
-      await submitFn({ data: parsed.data });
+      const phone = parsed.data.phone?.trim() ? `${dialCode} ${parsed.data.phone.trim()}` : "";
+      await submitFn({ data: { ...parsed.data, phone } });
       toast.success("Thank you — your message has been received.");
       setValues(initial);
+      setCountryIso(DEFAULT_COUNTRY_ISO);
+
     } catch (err) {
       console.error(err);
       toast.error("Could not send your message. Please try again shortly.");
