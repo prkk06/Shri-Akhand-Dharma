@@ -2,7 +2,8 @@ import { useState } from "react";
 import { z } from "zod";
 import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { useServerFn } from "@tanstack/react-start";
+import { submitContactForm } from "@/lib/contact.functions";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(120),
@@ -27,6 +28,7 @@ export default function ContactForm() {
   const [values, setValues] = useState<FormValues>(initial);
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
+  const submitFn = useServerFn(submitContactForm);
 
   const update = <K extends keyof FormValues>(key: K, v: FormValues[K]) => {
     setValues((p) => ({ ...p, [key]: v }));
@@ -49,14 +51,7 @@ export default function ContactForm() {
 
     setSubmitting(true);
     try {
-      const { error } = await supabase.from("contact_submissions").insert({
-        name: parsed.data.name,
-        email: parsed.data.email,
-        phone: parsed.data.phone || null,
-        subject: parsed.data.subject || null,
-        message: parsed.data.message,
-      });
-      if (error) throw error;
+      await submitFn({ data: parsed.data });
       toast.success("Thank you — your message has been received.");
       setValues(initial);
     } catch (err) {
