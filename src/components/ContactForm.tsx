@@ -2,7 +2,8 @@ import { useState } from "react";
 import { z } from "zod";
 import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { useServerFn } from "@tanstack/react-start";
+import { submitContactForm } from "@/lib/contact.functions";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(120),
