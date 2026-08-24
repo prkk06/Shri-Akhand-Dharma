@@ -1,0 +1,38 @@
+export type CountryCode = { code: string; label: string; iso: string };
+
+export const COUNTRY_CODES: CountryCode[] = [
+  { iso: "IN", code: "+91", label: "India" },
+  { iso: "GB", code: "+44", label: "United Kingdom" },
+  { iso: "US", code: "+1", label: "United States / Canada" },
+  { iso: "AE", code: "+971", label: "United Arab Emirates" },
+  { iso: "AU", code: "+61", label: "Australia" },
+  { iso: "SG", code: "+65", label: "Singapore" },
+  { iso: "NP", code: "+977", label: "Nepal" },
+  { iso: "LK", code: "+94", label: "Sri Lanka" },
+  { iso: "BD", code: "+880", label: "Bangladesh" },
+  { iso: "PK", code: "+92", label: "Pakistan" },
+  { iso: "MY", code: "+60", label: "Malaysia" },
+  { iso: "ZA", code: "+27", label: "South Africa" },
+  { iso: "KE", code: "+254", label: "Kenya" },
+  { iso: "SA", code: "+966", label: "Saudi Arabia" },
+  { iso: "QA", code: "+974", label: "Qatar" },
+  { iso: "OM", code: "+968", label: "Oman" },
+  { iso: "KW", code: "+965", label: "Kuwait" },
+  { iso: "DE", code: "+49", label: "Germany" },
+  { iso: "FR", code: "+33", label: "France" },
+  { iso: "NL", code: "+31", label: "Netherlands" },
+  { iso: "IT", code: "+39", label: "Italy" },
+  { iso: "ES", code: "+34", label: "Spain" },
+  { iso: "CH", code: "+41", label: "Switzerland" },
+  { iso: "IE", code: "+353", label: "Ireland" },
+  { iso: "NZ", code: "+64", label: "New Zealand" },
+  { iso: "JP", code: "+81", label: "Japan" },
+  { iso: "CN", code: "+86", label: "China" },
+  { iso: "HK", code: "+852", label: "Hong Kong" },
+  { iso: "TH", code: "+66", label: "Thailand" },
+  { iso: "ID", code: "+62", label: "Indonesia" },
+  { iso: "MU", code: "+230", label: "Mauritius" },
+  { iso: "FJ", code: "+679", label: "Fiji" },
+];
+
+export const DEFAULT_COUNTRY_ISO = "IN";

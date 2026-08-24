@@ -4,6 +4,7 @@ import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useServerFn } from "@tanstack/react-start";
 import { submitContactForm } from "@/lib/contact.functions";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_ISO } from "@/lib/country-codes";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(120),
@@ -26,14 +27,18 @@ const initial: FormValues = { name: "", email: "", phone: "", subject: "", messa
 
 export default function ContactForm() {
   const [values, setValues] = useState<FormValues>(initial);
+  const [countryIso, setCountryIso] = useState(DEFAULT_COUNTRY_ISO);
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
   const submitFn = useServerFn(submitContactForm);
+
+  const dialCode = COUNTRY_CODES.find((c) => c.iso === countryIso)?.code ?? "";
 
   const update = <K extends keyof FormValues>(key: K, v: FormValues[K]) => {
     setValues((p) => ({ ...p, [key]: v }));
     if (errors[key]) setErrors((p) => ({ ...p, [key]: undefined }));
   };
+
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
