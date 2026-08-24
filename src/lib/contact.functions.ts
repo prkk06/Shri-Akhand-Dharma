@@ -88,12 +88,15 @@ export const submitContactForm = createServerFn({ method: "POST" })
         if (!res.ok) {
           const errBody = await res.text();
           console.error(`Resend send failed [${res.status}]: ${errBody}`);
+          throw new Error("Email delivery failed.");
         }
       } catch (err) {
         console.error("Resend send error", err);
+        throw new Error("Email delivery failed.");
       }
     } else {
       console.error("Missing RESEND_API_KEY or LOVABLE_API_KEY; email not sent.");
+      throw new Error("Email delivery is not configured.");
     }
 
     return { ok: true };
