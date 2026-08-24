@@ -58,7 +58,7 @@ export const submitContactForm = createServerFn({ method: "POST" })
         <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:12px">
           <tr><td style="padding:6px 0;font-weight:600;width:90px">Name:</td><td style="padding:6px 0">${escapeHtml(data.name)}</td></tr>
           <tr><td style="padding:6px 0;font-weight:600">Email:</td><td style="padding:6px 0"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td></tr>
-          ${data.phone ? `<tr><td style="padding:6px 0;font-weight:600">Phone:</td><td style="padding:6px 0">${escapeHtml(data.phone)}</td></tr>` : ""}
+          <tr><td style="padding:6px 0;font-weight:600">Phone:</td><td style="padding:6px 0">${data.phone ? escapeHtml(data.phone) : "Not provided"}</td></tr>
           ${data.subject ? `<tr><td style="padding:6px 0;font-weight:600">Subject:</td><td style="padding:6px 0">${escapeHtml(data.subject)}</td></tr>` : ""}
         </table>
         <h3 style="font-size:14px;margin-top:18px;color:#0f1e3d">Message</h3>
