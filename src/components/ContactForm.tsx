@@ -112,15 +112,31 @@ export default function ContactForm() {
           <label htmlFor="cf-phone" className="block text-xs uppercase tracking-[0.2em] text-navy/70 mb-2">
             Phone
           </label>
-          <input
-            id="cf-phone"
-            type="tel"
-            value={values.phone}
-            onChange={(e) => update("phone", e.target.value)}
-            className={inputCls}
-            placeholder="+91 …"
-            maxLength={30}
-          />
+          <div className="flex gap-2">
+            <select
+              id="cf-country"
+              aria-label="Country code"
+              value={countryIso}
+              onChange={(e) => setCountryIso(e.target.value)}
+              className={`${inputCls} w-[7.5rem] shrink-0 px-2 cursor-pointer`}
+            >
+              {COUNTRY_CODES.map((c) => (
+                <option key={c.iso} value={c.iso}>
+                  {c.iso} {c.code}
+                </option>
+              ))}
+            </select>
+            <input
+              id="cf-phone"
+              type="tel"
+              value={values.phone}
+              onChange={(e) => update("phone", e.target.value)}
+              className={inputCls}
+              placeholder="Mobile number"
+              maxLength={20}
+            />
+          </div>
+
           {errors.phone && <p className="mt-1.5 text-xs text-copper">{errors.phone}</p>}
         </div>
         <div>
