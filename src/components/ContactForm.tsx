@@ -140,15 +140,30 @@ export default function ContactForm() {
             <input
               id="cf-phone"
               type="tel"
+              inputMode="numeric"
+              autoComplete="tel-national"
               value={values.phone}
-              onChange={(e) => update("phone", e.target.value)}
-              className={inputCls}
-              placeholder="Mobile number"
-              maxLength={20}
+              onChange={(e) => update("phone", digitsOnly(e.target.value).slice(0, country.max))}
+              className={`${inputCls} ${livePhoneError || errors.phone ? "border-copper focus:border-copper focus:ring-copper/40" : ""}`}
+              placeholder={country.example}
+              maxLength={country.max}
+              aria-invalid={Boolean(livePhoneError || errors.phone)}
+              aria-describedby="cf-phone-help"
             />
           </div>
+          <p id="cf-phone-help" className="mt-1.5 text-xs">
+            {errors.phone || livePhoneError ? (
+              <span className="text-copper">{errors.phone || livePhoneError}</span>
+            ) : (
+              <span className="text-charcoal/50">
+                {country.code} ·{" "}
+                {country.min === country.max
+                  ? `${country.min} digits`
+                  : `${country.min}–${country.max} digits`}
+              </span>
+            )}
+          </p>
 
-          {errors.phone && <p className="mt-1.5 text-xs text-copper">{errors.phone}</p>}
         </div>
         <div>
           <label htmlFor="cf-subject" className="block text-xs uppercase tracking-[0.2em] text-navy/70 mb-2">
