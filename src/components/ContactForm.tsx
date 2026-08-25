@@ -4,18 +4,19 @@ import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useServerFn } from "@tanstack/react-start";
 import { submitContactForm } from "@/lib/contact.functions";
-import { COUNTRY_CODES, DEFAULT_COUNTRY_ISO } from "@/lib/country-codes";
+import {
+  COUNTRY_CODES,
+  DEFAULT_COUNTRY_ISO,
+  digitsOnly,
+  findCountry,
+  toE164,
+  validateNationalNumber,
+} from "@/lib/country-codes";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(120),
   email: z.string().trim().email("Enter a valid email").max(255),
-  phone: z
-    .string()
-    .trim()
-    .max(30)
-    .regex(/^[0-9+\-()\s]*$/, "Enter a valid phone number")
-    .optional()
-    .or(z.literal("")),
+  phone: z.string().trim().max(20).optional().or(z.literal("")),
   subject: z.string().trim().max(160).optional().or(z.literal("")),
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000),
 });
@@ -32,23 +33,32 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const submitFn = useServerFn(submitContactForm);
 
-  const dialCode = COUNTRY_CODES.find((c) => c.iso === countryIso)?.code ?? "";
+  const country = findCountry(countryIso);
+  const phoneDigits = digitsOnly(values.phone ?? "");
+  const phoneTouched = phoneDigits.length > 0;
+  const livePhoneError = phoneTouched ? validateNationalNumber(countryIso, phoneDigits) : null;
 
   const update = <K extends keyof FormValues>(key: K, v: FormValues[K]) => {
     setValues((p) => ({ ...p, [key]: v }));
     if (errors[key]) setErrors((p) => ({ ...p, [key]: undefined }));
   };
 
-
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const parsed = schema.safeParse(values);
+    const fieldErrors: Errors = {};
     if (!parsed.success) {
-      const fieldErrors: Errors = {};
       for (const issue of parsed.error.issues) {
         const k = issue.path[0] as keyof FormValues;
         if (!fieldErrors[k]) fieldErrors[k] = issue.message;
       }
+    }
+    // Phone is optional, but when provided it must match the selected country.
+    if (phoneTouched) {
+      const phoneError = validateNationalNumber(countryIso, phoneDigits);
+      if (phoneError) fieldErrors.phone = phoneError;
+    }
+    if (!parsed.success || Object.keys(fieldErrors).length > 0) {
       setErrors(fieldErrors);
       toast.error("Please fix the highlighted fields.");
       return;
@@ -56,11 +66,12 @@ export default function ContactForm() {
 
     setSubmitting(true);
     try {
-      const phone = parsed.data.phone?.trim() ? `${dialCode} ${parsed.data.phone.trim()}` : "";
+      const phone = phoneTouched ? toE164(countryIso, phoneDigits) : "";
       await submitFn({ data: { ...parsed.data, phone } });
       toast.success("Thank you — your message has been received.");
       setValues(initial);
       setCountryIso(DEFAULT_COUNTRY_ISO);
+
 
     } catch (err) {
       console.error(err);
