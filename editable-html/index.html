@@ -232,7 +232,8 @@
       .partner-grid { grid-template-columns: 5fr 7fr; gap: 4rem; }
     }
     .prose > p + p { margin-top: 1.25rem; }
-    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85); }
+    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85);text-align: left;
+    justify-content: space-between;}
 
     /* Vision / Mission */
     .vm-grid { display: grid; gap: 1.5rem; }
@@ -372,6 +373,12 @@
     @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
     .footer-bottom .motto { font-family: 'Cinzel', serif; letter-spacing: 0.35em; color: var(--gold); }
     .footer-bottom .copy { color: rgba(247,244,238,0.6); }
+
+    @layer base {
+      #lovable-badge {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
