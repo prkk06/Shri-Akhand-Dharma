@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shri Akhand Dharma Foundation — Empowering Lives Through Service</title>
-  <meta name="description" content="A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and sustainable livelihood initiatives across India." />
+  <meta name="description" content="A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and Self-reliant livelihood initiatives across India." />
   <meta property="og:title" content="Shri Akhand Dharma Foundation" />
   <meta property="og:description" content="Empowering lives through faith, service and compassion." />
   <meta property="og:url" content="https://shriakhanddharmatrust.org/" />
@@ -25,6 +25,8 @@
        Avoid changing anything inside this <style> block unless
        you know CSS. Colors and layout live here.
        ============================================================ */
+       
+    #lovable-badge { display: none !important;}
     :root {
       --navy: #0B1F3A;
       --navy-90: rgba(11,31,58,0.92);
@@ -232,8 +234,19 @@
       .partner-grid { grid-template-columns: 5fr 7fr; gap: 4rem; }
     }
     .prose > p + p { margin-top: 1.25rem; }
-    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85);text-align: left;
-    justify-content: space-between;}
+    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85);text-align: left !important;}
+
+    .sm\:mt-10
+    {
+      text-align: left !important;
+    }
+
+    @media (min-width: 40rem) {
+    .sm\:mt-10 {
+        margin-top: calc(var(--spacing) * 10);
+        text-align: left !important;
+      }
+    } 
 
     /* Vision / Mission */
     .vm-grid { display: grid; gap: 1.5rem; }
@@ -373,6 +386,7 @@
     @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
     .footer-bottom .motto { font-family: 'Cinzel', serif; letter-spacing: 0.35em; color: var(--gold); }
     .footer-bottom .copy { color: rgba(247,244,238,0.6); }
+
   </style>
 </head>
 <body>
@@ -425,7 +439,7 @@
       <p class="tagline">Empowering lives through faith, service and compassion.</p>
       <p class="lede">
         A non-profit organisation dedicated to empowering communities through skill development, education,
-        social welfare and sustainable livelihood initiatives. The Foundation works to promote inclusive growth and
+        social welfare and self-reliant livelihood initiatives. The Foundation works to promote inclusive growth and
         improve the quality of life for underprivileged individuals through impactful programmes and partnerships.
       </p>
 
@@ -449,7 +463,7 @@
     <div class="prose">
       <p>
         Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate, inclusive
-        and sustainable society, guided by the enduring values of humanity, service and integrity.
+        and resilient society, guided by the enduring values of humanity, service and integrity.
       </p>
       <p>
         The Foundation works to uplift underserved communities through impactful initiatives in education, healthcare,
@@ -474,7 +488,7 @@
         <h3 class="card-title">A Future of Dignity & Opportunity</h3>
         <div class="prose" style="margin-top:1.5rem;">
           <p>
-            Our vision is to build a compassionate and sustainable society where every individual has access to
+            Our vision is to build a compassionate and resilient society where every individual has access to
             education, healthcare, dignity, and opportunity. A future where communities prosper, nature is protected,
             cultural heritage is preserved, and every life is empowered to thrive.
           </p>
@@ -564,11 +578,11 @@
       </p>
       <p>
         By honouring heritage while embracing innovation, we work to build stronger communities and a more inclusive,
-        compassionate and sustainable future.
+        compassionate and resilient future.
       </p>
       <p class="quote">
         "Designed to transform timeless values into meaningful action, creating lasting social impact through community
-        empowerment, sustainable development and selfless service."
+        empowerment, responsible development and selfless service."
       </p>
     </div>
   </div>
@@ -615,7 +629,7 @@
       At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action. We
       invite individuals, organisations, corporate partners, educational institutions and development agencies to
       collaborate with us through volunteering, donations or knowledge sharing for advancing education, healthcare,
-      environmental sustainability and community well-being. Together, we can create sustainable solutions that
+      environmental sustainability and community well-being. Together, we can create lasting solutions that
       empower lives and strengthen communities for generations to come.
     </p>
 
@@ -669,7 +683,7 @@
           <div class="line2">FOUNDATION</div>
         </div>
       </div>
-      <p class="footer-tag">To drive inclusive and sustainable development through strategic partnerships that create lasting social impact.</p>
+      <p class="footer-tag">To drive inclusive and responsible development through strategic partnerships that create lasting social impact.</p>
     </div>
     <div>
       <h4>Reach</h4>
