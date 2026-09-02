@@ -86,6 +86,11 @@
     border-color: var(--color-border);
   }
 
+  #lovable-badge {
+    display: none !important;
+  }
+
+
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -104,6 +109,11 @@
     font-family: var(--font-display);
     letter-spacing: 0.01em;
   }
+}
+
+.sm\:mt-10
+{
+  text-align: left !important;
 }
 
 @utility gold-divider {
