@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and sustainable livelihood initiatives across India.",
+         "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and Self-reliant livelihood initiatives across India.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Foundation" },
       { property: "og:description", content: "Empowering lives through faith, service and compassion." },
@@ -209,10 +209,7 @@ function Index() {
               Empowering lives through faith, service and compassion.
             </p>
             <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
-              A non-profit organisation dedicated to empowering communities through skill development, education,
-              social welfare and sustainable livelihood initiatives. The Foundation works to promote inclusive growth
-              and improve the quality of life for underprivileged individuals through impactful programmes and
-              partnerships.
+            "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and Self-reliant livelihood initiatives across India."
             </p>
 
 
