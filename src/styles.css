@@ -111,6 +111,11 @@
   }
 }
 
+.sm\:text-lg
+{
+  text-align: left !important;
+}
+
 .sm\:mt-10
 {
   text-align: left !important;
