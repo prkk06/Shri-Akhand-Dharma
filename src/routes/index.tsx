@@ -346,7 +346,7 @@ function Index() {
             Why These Initiatives Matter ??
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style="text-align:left !important;">
+          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style={{ textAlign: "left" }}>
             <p>
               At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
               integrity and respect for humanity. Our initiatives apply these values through sustainable,
@@ -406,7 +406,7 @@ function Index() {
           <SectionLabel center>Get in Touch</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style="text-align:left !important;">
+          <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style={{ textAlign: "left" }}>
             At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action.
             We invite individuals, organisations, corporate partners, educational institutions and development agencies
             to collaborate with us through volunteering, donations or knowledge sharing for advancing education,
