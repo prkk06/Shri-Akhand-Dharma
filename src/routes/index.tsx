@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-         "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and Self-reliant livelihood initiatives across India.",
+          "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and self-reliant livelihood initiatives across India.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Foundation" },
       { property: "og:description", content: "Empowering lives through faith, service and compassion." },
@@ -209,7 +209,10 @@ function Index() {
               Empowering lives through faith, service and compassion.
             </p>
             <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
-            "A non-profit organisation empowering communities through skill development, education, healthcare, social welfare and Self-reliant livelihood initiatives across India."
+              A non-profit organisation dedicated to empowering communities through skill development, education,
+              social welfare and self-reliant livelihood initiatives. The Foundation works to promote inclusive growth
+              and improve the quality of life for underprivileged individuals through impactful programmes and
+              partnerships.
             </p>
 
 
@@ -254,17 +257,18 @@ function Index() {
           </div>
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate, inclusive
-              and resilient society, guided by the enduring values of humanity, service and integrity.
+              Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate,
+              inclusive and resilient society, guided by the enduring values of humanity, service and integrity.
             </p>
             <p>
-             The Foundation works to uplift underserved communities through impactful initiatives in education, healthcare,
-            poverty alleviation, environmental conservation and social welfare.
+              The Foundation works to uplift underserved communities through impactful initiatives in education,
+              healthcare, poverty alleviation, environmental conservation and social welfare.
             </p>
             <p>
-             By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma Foundation is
-             committed to creating meaningful and lasting social impact. Through collaboration, transparency and selfless
-             service, we strive to build a future where every individual can live with dignity, equality and hope.
+              By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma
+              Foundation is committed to creating meaningful and lasting social impact. Through collaboration,
+              transparency and selfless service, we strive to build a future where every individual can live with
+              dignity, equality and hope.
             </p>
 
           </div>
@@ -280,9 +284,9 @@ function Index() {
               <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navy">A Future of Dignity & Opportunity</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
-                Our vision is to build a compassionate and resilient society where every individual has access to
-                education, healthcare, dignity, and opportunity. A future where communities prosper, nature is protected,
-                cultural heritage is preserved, and every life is empowered to thrive.
+                  Our vision is to build a compassionate and resilient society where every individual has access to
+                  education, healthcare, dignity, and opportunity. A future where communities prosper, nature is protected,
+                  cultural heritage is preserved, and every life is empowered to thrive.
                 </p>
               </div>
             </article>
@@ -291,12 +295,12 @@ function Index() {
               <h3 className="mt-5 font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-gold">Enriching Lives, Preserving Heritage</h3>
               <div className="mt-5 sm:mt-6 space-y-4 sm:space-y-5 text-ivory/85 leading-relaxed text-[17px] sm:text-base">
                 <p>
-                Our mission is to enrich lives through education, healthcare, women and child empowerment, environmental
-                conservation, animal welfare, rural development, skill enhancement, and community welfare.
+                  Our mission is to enrich lives through education, healthcare, women and child empowerment, environmental
+                  conservation, animal welfare, rural development, skill enhancement, and community welfare.
                 </p>
                 <p>
-                With compassion, innovation, and a commitment to preserving our cultural heritage, we strive to build a
-                better future for all.
+                  With compassion, innovation, and a commitment to preserving our cultural heritage, we strive to build a
+                  better future for all.
                 </p>
               </div>
             </article>
@@ -339,22 +343,23 @@ function Index() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center">
           <SectionLabel center>Significance</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
-            Why These Initiatives Matter
+            Why These Initiatives Matter ??
           </h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
+          <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style="text-align:left !important;">
             <p>
-            At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
-            integrity and respect for humanity. Our initiatives apply these values through sustainable, community-driven
-            efforts in education, healthcare, environmental care, cultural preservation and social empowerment.
+              At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
+              integrity and respect for humanity. Our initiatives apply these values through sustainable,
+              community-driven efforts in education, healthcare, environmental care, cultural preservation and social
+              empowerment.
             </p>
             <p>
-            By honouring heritage while embracing innovation, we work to build stronger communities and a more inclusive,
-            compassionate and resilient future.
+              By honouring heritage while embracing innovation, we work to build stronger communities and a more
+              inclusive, compassionate and resilient future.
             </p>
             <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 text-left max-w-2xl mx-auto">
-            "Designed to transform timeless values into meaningful action, creating lasting social impact through community
-            empowerment, responsible development and selfless service."
+              "Designed to transform timeless values into meaningful action, creating lasting social impact through
+              community empowerment, responsible development and selfless service."
             </p>
 
           </div>
@@ -370,8 +375,8 @@ function Index() {
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
-            The Foundation welcomes support and participation from individuals and organisations who share our commitment
-            to build infrastructure, networks and an ecosystem that serve society and future generations.
+              The Foundation welcomes support and participation from individuals and organisations who share our
+              commitment to build infrastructure, networks and an ecosystem that serve society and future generations.
             </p>
 
             <a
@@ -401,14 +406,16 @@ function Index() {
           <SectionLabel center>Get in Touch</SectionLabel>
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
-          <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
-          At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action. We
-          invite individuals, organisations, corporate partners, educational institutions and development agencies to
-          collaborate with us through volunteering, donations or knowledge sharing for advancing education, healthcare,
-          environmental sustainability and community well-being. Together, we can create lasting solutions that
-          empower lives and strengthen communities for generations to come.
+          <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85" style="text-align:left !important;">
+            At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action.
+            We invite individuals, organisations, corporate partners, educational institutions and development agencies
+            to collaborate with us through volunteering, donations or knowledge sharing for advancing education,
+            healthcare, environmental sustainability and community well-being.
           </p>
-  
+          <p className="mt-5 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
+            Together, we can create lasting solutions that empower lives and strengthen communities for generations
+            to come.
+          </p>
 
           <div className="mt-10 sm:mt-12 grid lg:grid-cols-5 gap-6 sm:gap-8 text-left">
             <div className="lg:col-span-2 space-y-4 sm:space-y-5">
@@ -464,7 +471,8 @@ function Index() {
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">
-              To drive inclusive and responsible development through strategic partnerships that create lasting social impact.
+                To drive inclusive and responsible development through strategic partnerships that create lasting
+                social impact.
               </p>
 
             </div>
