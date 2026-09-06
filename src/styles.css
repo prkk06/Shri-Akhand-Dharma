@@ -111,15 +111,9 @@
   }
 }
 
-.sm\:text-lg
-{
-  text-align: left !important;
-}
-
-.sm\:mt-10
-{
-  text-align: left !important;
-}
+.sm\:text-lg{text-align: justify !important;}                                                                                                
+.sm\:mt-10{text-align: justify !important;}
+/*.sm\:text-base{text-align: left !important;}*/
 
 @utility gold-divider {
   position: relative;
