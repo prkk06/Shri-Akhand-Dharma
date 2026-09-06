@@ -50,6 +50,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+    p { text-align: justify; }
     .font-display { font-family: 'Cinzel', serif; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
@@ -234,19 +235,7 @@
       .partner-grid { grid-template-columns: 5fr 7fr; gap: 4rem; }
     }
     .prose > p + p { margin-top: 1.25rem; }
-    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85);text-align: left !important;}
-
-    .sm\:mt-10
-    {
-      text-align: left !important;
-    }
-
-    @media (min-width: 40rem) {
-    .sm\:mt-10 {
-        margin-top: calc(var(--spacing) * 10);
-        text-align: left !important;
-      }
-    } 
+    .prose { font-size: 1.0625rem; line-height: 1.7; color: var(--charcoal-85); }
 
     /* Vision / Mission */
     .vm-grid { display: grid; gap: 1.5rem; }
@@ -289,7 +278,7 @@
     .quote {
       font-family: 'Cinzel', serif; font-style: italic;
       color: var(--navy); border-left: 2px solid var(--gold);
-      padding-left: 1.5rem; text-align: left; max-width: 640px; margin: 0 auto;
+      padding-left: 1.5rem; text-align: justify; max-width: 640px; margin: 0 auto;
       font-size: 1.125rem;
     }
     @media (min-width: 640px) { .quote { font-size: 1.25rem; } }
