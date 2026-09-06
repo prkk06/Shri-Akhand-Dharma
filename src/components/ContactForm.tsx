@@ -119,7 +119,7 @@ export default function ContactForm() {
           />
           {errors.email && <p className="mt-1.5 text-xs text-copper">{errors.email}</p>}
         </div>
-        <div>
+        <div className="sm:col-span-2">
           <label htmlFor="cf-phone" className="block text-xs uppercase tracking-[0.2em] text-navy/70 mb-2">
             Phone
           </label>
