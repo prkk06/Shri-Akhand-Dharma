@@ -357,7 +357,7 @@ function Index() {
               By honouring heritage while embracing innovation, we work to build stronger communities and a more
               inclusive, compassionate and resilient future.
             </p>
-            <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 text-left max-w-2xl mx-auto">
+            <p className="font-display text-lg sm:text-xl text-navy italic border-l-2 border-gold pl-5 sm:pl-6 max-w-2xl mx-auto">
               "Designed to transform timeless values into meaningful action, creating lasting social impact through
               community empowerment, responsible development and selfless service."
             </p>
