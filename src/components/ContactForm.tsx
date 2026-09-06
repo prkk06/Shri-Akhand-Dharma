@@ -123,13 +123,13 @@ export default function ContactForm() {
           <label htmlFor="cf-phone" className="block text-xs uppercase tracking-[0.2em] text-navy/70 mb-2">
             Phone
           </label>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:grid sm:grid-cols-[auto_minmax(0,1fr)]">
             <select
               id="cf-country"
               aria-label="Country code"
               value={countryIso}
               onChange={(e) => setCountryIso(e.target.value)}
-              className={`${inputCls} w-[7.5rem] shrink-0 px-2 cursor-pointer`}
+              className={`${inputCls} w-full sm:w-auto sm:min-w-[6.5rem] shrink-0 px-2 cursor-pointer`}
             >
               {COUNTRY_CODES.map((c) => (
                 <option key={c.iso} value={c.iso}>
@@ -144,7 +144,7 @@ export default function ContactForm() {
               autoComplete="tel-national"
               value={values.phone}
               onChange={(e) => update("phone", digitsOnly(e.target.value).slice(0, country.max))}
-              className={`${inputCls} ${livePhoneError || errors.phone ? "border-copper focus:border-copper focus:ring-copper/40" : ""}`}
+              className={`${inputCls} min-w-0 ${livePhoneError || errors.phone ? "border-copper focus:border-copper focus:ring-copper/40" : ""}`}
               placeholder={country.example}
               maxLength={country.max}
               aria-invalid={Boolean(livePhoneError || errors.phone)}
@@ -163,7 +163,6 @@ export default function ContactForm() {
               </span>
             )}
           </p>
-
         </div>
         <div>
           <label htmlFor="cf-subject" className="block text-xs uppercase tracking-[0.2em] text-navy/70 mb-2">
