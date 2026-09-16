@@ -22,7 +22,11 @@ function requireEnv(name: string): string {
   return value;
 }
 
-export async function driveFetch(path: string, params: Record<string, string>) {
+export async function driveFetch(
+  path: string,
+  params: Record<string, string>,
+  extraHeaders?: Record<string, string>,
+) {
   const lovableKey = requireEnv("LOVABLE_API_KEY");
   const connectionKey = requireEnv("GOOGLE_DRIVE_API_KEY");
   const url = new URL(`${GATEWAY}${path}`);
@@ -32,6 +36,7 @@ export async function driveFetch(path: string, params: Record<string, string>) {
     headers: {
       Authorization: `Bearer ${lovableKey}`,
       "X-Connection-Api-Key": connectionKey,
+      ...(extraHeaders ?? {}),
     },
   });
   return res;
@@ -51,11 +56,12 @@ export function getGalleryFolderId(): string {
   return requireEnv("GALLERY_DRIVE_FOLDER_ID");
 }
 
-const IMAGE_FIELDS = "files(id,name,mimeType,imageMediaMetadata(width,height))";
+const IMAGE_FIELDS =
+  "files(id,name,mimeType,thumbnailLink,imageMediaMetadata(width,height))";
 
 export async function listEventPhotos(folderId: string): Promise<DrivePhoto[]> {
   const data = await driveJson<{ files?: Array<Record<string, any>> }>("/files", {
-    q: `'${folderId}' in parents and trashed = false and mimeType contains 'image/'`,
+    q: `'${folderId}' in parents and trashed = false and (mimeType contains 'image/' or mimeType contains 'video/')`,
     fields: IMAGE_FIELDS,
     orderBy: "name",
     pageSize: "200",
