@@ -6,6 +6,7 @@ export type DrivePhoto = {
   mimeType: string;
   width?: number;
   height?: number;
+  thumbnail?: string;
 };
 
 export type DriveEvent = {
@@ -13,6 +14,7 @@ export type DriveEvent = {
   name: string;
   coverId: string | null;
   coverMimeType?: string;
+  coverThumbnail?: string;
   photoCount: number;
   modifiedTime?: string;
 };
@@ -75,6 +77,7 @@ export async function listEventPhotos(folderId: string): Promise<DrivePhoto[]> {
     mimeType: f.mimeType as string,
     width: f.imageMediaMetadata?.width,
     height: f.imageMediaMetadata?.height,
+    thumbnail: (f.thumbnailLink as string | undefined)?.replace(/=s\d+$/, "=s1600"),
   }));
 }
 
@@ -106,6 +109,7 @@ export async function listEvents(): Promise<DriveEvent[]> {
         modifiedTime: folder.modifiedTime as string | undefined,
         coverId: cover?.id ?? null,
         coverMimeType: cover?.mimeType,
+        coverThumbnail: cover?.thumbnail,
         photoCount: photos.filter((p) => p !== cover || photos.length === 1).length,
       };
     }),
