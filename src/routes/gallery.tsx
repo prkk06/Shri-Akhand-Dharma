@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import { ArrowLeft, Images, X } from "lucide-react";
+import { ArrowLeft, Images, Play, X } from "lucide-react";
 
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import { getGalleryEvents, getEventPhotos } from "@/lib/gallery.functions";
@@ -36,7 +36,9 @@ function GalleryPage() {
   const fetchEvents = useServerFn(getGalleryEvents);
   const fetchPhotos = useServerFn(getEventPhotos);
   const [openEvent, setOpenEvent] = useState<{ id: string; name: string } | null>(null);
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ id: string; mimeType: string; name: string } | null>(
+    null,
+  );
 
   const eventsQuery = useQuery({ queryKey: ["gallery-events"], queryFn: () => fetchEvents() });
   const photosQuery = useQuery({
@@ -164,21 +166,41 @@ function GalleryPage() {
             )}
             {photosQuery.data && photosQuery.data.photos.length > 0 && (
               <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-                {photosQuery.data.photos.map((photo) => (
-                  <button
-                    key={photo.id}
-                    type="button"
-                    onClick={() => setLightbox(photo.id)}
-                    className="aspect-square overflow-hidden rounded-md border border-border bg-navy/5 group"
-                  >
-                    <img
-                      src={imageUrl(photo.id)}
-                      alt={photo.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </button>
-                ))}
+                {photosQuery.data.photos.map((photo) => {
+                  const isVideo = photo.mimeType.startsWith("video/");
+                  return (
+                    <button
+                      key={photo.id}
+                      type="button"
+                      onClick={() => setLightbox(photo)}
+                      className="relative aspect-square overflow-hidden rounded-md border border-border bg-navy/5 group"
+                    >
+                      {isVideo ? (
+                        <>
+                          <video
+                            src={imageUrl(photo.id)}
+                            preload="metadata"
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover"
+                          />
+                          <span className="absolute inset-0 flex items-center justify-center bg-navy/40 transition-colors group-hover:bg-navy/25">
+                            <span className="w-12 h-12 rounded-full bg-ivory/90 text-navy inline-flex items-center justify-center">
+                              <Play size={20} className="ml-0.5" />
+                            </span>
+                          </span>
+                        </>
+                      ) : (
+                        <img
+                          src={imageUrl(photo.id)}
+                          alt={photo.name}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -200,11 +222,22 @@ function GalleryPage() {
           >
             <X size={22} />
           </button>
-          <img
-            src={imageUrl(lightbox)}
-            alt=""
-            className="max-h-[88vh] max-w-full object-contain rounded-md"
-          />
+          {lightbox.mimeType.startsWith("video/") ? (
+            <video
+              src={imageUrl(lightbox.id)}
+              controls
+              autoPlay
+              playsInline
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-[88vh] max-w-full rounded-md bg-black"
+            />
+          ) : (
+            <img
+              src={imageUrl(lightbox.id)}
+              alt={lightbox.name}
+              className="max-h-[88vh] max-w-full object-contain rounded-md"
+            />
+          )}
         </div>
       )}
 
