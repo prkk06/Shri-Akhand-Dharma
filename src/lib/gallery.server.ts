@@ -92,10 +92,11 @@ export async function listEvents(): Promise<DriveEvent[]> {
   return Promise.all(
     folders.map(async (folder) => {
       const photos = await listEventPhotos(folder.id as string);
+      const images = photos.filter((p) => p.mimeType.startsWith("image/"));
       const cover =
-        photos.find((p) => p.name.toLowerCase().replace(/\.[^.]+$/, "") === "cover") ??
-        photos.find((p) => p.name.toLowerCase().startsWith("cover")) ??
-        photos[0];
+        images.find((p) => p.name.toLowerCase().replace(/\.[^.]+$/, "") === "cover") ??
+        images.find((p) => p.name.toLowerCase().startsWith("cover")) ??
+        images[0];
       return {
         id: folder.id as string,
         name: folder.name as string,
