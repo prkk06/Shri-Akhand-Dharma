@@ -12,6 +12,7 @@ export type DriveEvent = {
   id: string;
   name: string;
   coverId: string | null;
+  coverMimeType?: string;
   photoCount: number;
   modifiedTime?: string;
 };
@@ -93,15 +94,18 @@ export async function listEvents(): Promise<DriveEvent[]> {
     folders.map(async (folder) => {
       const photos = await listEventPhotos(folder.id as string);
       const images = photos.filter((p) => p.mimeType.startsWith("image/"));
+      const baseName = (n: string) => n.toLowerCase().replace(/\.[^.]+$/, "").trim();
       const cover =
-        images.find((p) => p.name.toLowerCase().replace(/\.[^.]+$/, "") === "cover") ??
-        images.find((p) => p.name.toLowerCase().startsWith("cover")) ??
+        images.find((p) => baseName(p.name) === "cover") ??
+        // e.g. "Cover Video" in a video folder — may itself be a video file
+        photos.find((p) => baseName(p.name).startsWith("cover")) ??
         images[0];
       return {
         id: folder.id as string,
         name: folder.name as string,
         modifiedTime: folder.modifiedTime as string | undefined,
         coverId: cover?.id ?? null,
+        coverMimeType: cover?.mimeType,
         photoCount: photos.filter((p) => p !== cover || photos.length === 1).length,
       };
     }),
