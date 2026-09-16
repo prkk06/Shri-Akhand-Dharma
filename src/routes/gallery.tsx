@@ -131,9 +131,9 @@ function GalleryPage() {
                   >
                     <div className="aspect-[4/3] bg-navy/5 overflow-hidden">
                       {event.coverId ? (
-                        event.coverMimeType?.startsWith("video/") && event.coverThumbnail ? (
+                        event.coverMimeType?.startsWith("video/") ? (
                           <img
-                            src={event.coverThumbnail}
+                            src={`${imageUrl(event.coverId)}&thumb=1`}
                             alt={event.name}
                             loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
