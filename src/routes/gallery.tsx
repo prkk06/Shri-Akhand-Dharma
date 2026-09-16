@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import { ArrowLeft, Images, X } from "lucide-react";
+import { ArrowLeft, Images, Play, X } from "lucide-react";
 
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import { getGalleryEvents, getEventPhotos } from "@/lib/gallery.functions";
@@ -36,7 +36,9 @@ function GalleryPage() {
   const fetchEvents = useServerFn(getGalleryEvents);
   const fetchPhotos = useServerFn(getEventPhotos);
   const [openEvent, setOpenEvent] = useState<{ id: string; name: string } | null>(null);
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ id: string; mimeType: string; name: string } | null>(
+    null,
+  );
 
   const eventsQuery = useQuery({ queryKey: ["gallery-events"], queryFn: () => fetchEvents() });
   const photosQuery = useQuery({
