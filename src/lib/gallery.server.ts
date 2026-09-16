@@ -6,12 +6,15 @@ export type DrivePhoto = {
   mimeType: string;
   width?: number;
   height?: number;
+  thumbnail?: string;
 };
 
 export type DriveEvent = {
   id: string;
   name: string;
   coverId: string | null;
+  coverMimeType?: string;
+  coverThumbnail?: string;
   photoCount: number;
   modifiedTime?: string;
 };
@@ -74,6 +77,7 @@ export async function listEventPhotos(folderId: string): Promise<DrivePhoto[]> {
     mimeType: f.mimeType as string,
     width: f.imageMediaMetadata?.width,
     height: f.imageMediaMetadata?.height,
+    thumbnail: (f.thumbnailLink as string | undefined)?.replace(/=s\d+$/, "=s1600"),
   }));
 }
 
@@ -93,15 +97,19 @@ export async function listEvents(): Promise<DriveEvent[]> {
     folders.map(async (folder) => {
       const photos = await listEventPhotos(folder.id as string);
       const images = photos.filter((p) => p.mimeType.startsWith("image/"));
+      const baseName = (n: string) => n.toLowerCase().replace(/\.[^.]+$/, "").trim();
       const cover =
-        images.find((p) => p.name.toLowerCase().replace(/\.[^.]+$/, "") === "cover") ??
-        images.find((p) => p.name.toLowerCase().startsWith("cover")) ??
+        images.find((p) => baseName(p.name) === "cover") ??
+        // e.g. "Cover Video" in a video folder — may itself be a video file
+        photos.find((p) => baseName(p.name).startsWith("cover")) ??
         images[0];
       return {
         id: folder.id as string,
         name: folder.name as string,
         modifiedTime: folder.modifiedTime as string | undefined,
         coverId: cover?.id ?? null,
+        coverMimeType: cover?.mimeType,
+        coverThumbnail: cover?.thumbnail,
         photoCount: photos.filter((p) => p !== cover || photos.length === 1).length,
       };
     }),

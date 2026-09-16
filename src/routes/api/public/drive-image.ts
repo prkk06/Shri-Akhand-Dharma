@@ -8,8 +8,29 @@ export const Route = createFileRoute("/api/public/drive-image")({
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const id = new URL(request.url).searchParams.get("id") ?? "";
+        const url = new URL(request.url);
+        const id = url.searchParams.get("id") ?? "";
         if (!ID_RE.test(id)) return new Response("Invalid id", { status: 400 });
+
+        // Thumbnail mode: serve Drive's generated thumbnail (used for video covers,
+        // whose googleusercontent URLs browsers block when embedded cross-origin).
+        if (url.searchParams.get("thumb") === "1") {
+          const meta = await driveFetch(`/files/${id}`, {
+            fields: "thumbnailLink",
+            supportsAllDrives: "true",
+          });
+          if (!meta.ok) return new Response("Thumbnail unavailable", { status: meta.status });
+          const { thumbnailLink } = (await meta.json()) as { thumbnailLink?: string };
+          if (!thumbnailLink) return new Response("No thumbnail", { status: 404 });
+          const thumb = await fetch(thumbnailLink.replace(/=s\d+$/, "=s1600"));
+          if (!thumb.ok) return new Response("Thumbnail unavailable", { status: thumb.status });
+          return new Response(thumb.body, {
+            headers: {
+              "content-type": thumb.headers.get("content-type") ?? "image/jpeg",
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
 
         const range = request.headers.get("range");
         const res = await driveFetch(

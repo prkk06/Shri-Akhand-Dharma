@@ -131,12 +131,21 @@ function GalleryPage() {
                   >
                     <div className="aspect-[4/3] bg-navy/5 overflow-hidden">
                       {event.coverId ? (
-                        <img
-                          src={imageUrl(event.coverId)}
-                          alt={event.name}
-                          loading="lazy"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
+                        event.coverMimeType?.startsWith("video/") ? (
+                          <img
+                            src={`${imageUrl(event.coverId)}&thumb=1`}
+                            alt={event.name}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <img
+                            src={imageUrl(event.coverId)}
+                            alt={event.name}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        )
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-navy/30">
                           <Images size={32} />
