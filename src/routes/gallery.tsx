@@ -136,7 +136,7 @@ function GalleryPage() {
                             src={imageUrl(event.coverId)}
                             muted
                             playsInline
-                            preload="metadata"
+                            preload="auto"
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         ) : (
