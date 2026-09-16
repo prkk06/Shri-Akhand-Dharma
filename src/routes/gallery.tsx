@@ -186,13 +186,16 @@ function GalleryPage() {
                     >
                       {isVideo ? (
                         <>
-                          <video
-                            src={imageUrl(photo.id)}
-                            preload="metadata"
-                            muted
-                            playsInline
-                            className="w-full h-full object-cover"
-                          />
+                          {photo.thumbnail ? (
+                            <img
+                              src={`${imageUrl(photo.id)}&thumb=1`}
+                              alt={photo.name}
+                              loading="lazy"
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <span className="w-full h-full bg-navy/10" />
+                          )}
                           <span className="absolute inset-0 flex items-center justify-center bg-navy/40 transition-colors group-hover:bg-navy/25">
                             <span className="w-12 h-12 rounded-full bg-ivory/90 text-navy inline-flex items-center justify-center">
                               <Play size={20} className="ml-0.5" />
