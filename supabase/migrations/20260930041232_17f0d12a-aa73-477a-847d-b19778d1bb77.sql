@@ -1,0 +1,1 @@
+DELETE FROM public.funders WHERE name = 'Test Supporter';

@@ -35,6 +35,8 @@ const nav = [
   { label: "Vision", href: "#vision" },
   { label: "Values", href: "#values" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Funders", href: "/funders" },
+
   { label: "Partner", href: "#partner" },
   { label: "Contact", href: "#contact" },
 ];
