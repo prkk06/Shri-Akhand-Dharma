@@ -98,12 +98,25 @@ function FundersPage() {
                 key={funder.id}
                 className="rounded-lg border border-border bg-card p-6 flex flex-col hover:border-gold transition-colors"
               >
-                {funder.category && (
-                  <span className="self-start rounded-full border border-gold/40 text-gold text-[11px] uppercase tracking-[0.15em] px-3 py-1">
-                    {funder.category}
-                  </span>
-                )}
-                <h2 className="mt-4 font-display text-lg font-semibold text-navy">{funder.name}</h2>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 flex-none rounded-md border border-border bg-ivory flex items-center justify-center overflow-hidden">
+                    {funder.logoUrl ? (
+                      <img src={funder.logoUrl} alt={`${funder.name} logo`} className="max-w-full max-h-full object-contain p-1.5" loading="lazy" />
+                    ) : (
+                      <span className="font-display text-xl font-semibold text-gold">
+                        {funder.name.charAt(0).toUpperCase()}
+                      </span>
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    {funder.category && (
+                      <span className="inline-block rounded-full border border-gold/40 text-gold text-[11px] uppercase tracking-[0.15em] px-3 py-1">
+                        {funder.category}
+                      </span>
+                    )}
+                    <h2 className="mt-2 font-display text-lg font-semibold text-navy">{funder.name}</h2>
+                  </div>
+                </div>
                 {funder.description && (
                   <p className="mt-2 text-[15px] leading-relaxed text-charcoal/80 text-justify">
                     {funder.description}

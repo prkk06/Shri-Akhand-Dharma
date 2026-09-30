@@ -11,7 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FundersRouteImport } from './routes/funders'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as ApiPublicDriveImageRouteImport } from './routes/api/public/drive-image'
 
 const GalleryRoute = GalleryRouteImport.update({
@@ -24,10 +27,24 @@ const FundersRoute = FundersRouteImport.update({
   path: '/funders',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const ApiPublicDriveImageRoute = ApiPublicDriveImageRouteImport.update({
   id: '/api/public/drive-image',
@@ -37,33 +54,62 @@ const ApiPublicDriveImageRoute = ApiPublicDriveImageRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
   '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/funders' | '/gallery' | '/api/public/drive-image'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/funders'
+    | '/gallery'
+    | '/admin'
+    | '/api/public/drive-image'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/funders' | '/gallery' | '/api/public/drive-image'
-  id: '__root__' | '/' | '/funders' | '/gallery' | '/api/public/drive-image'
+  to:
+    | '/'
+    | '/auth'
+    | '/funders'
+    | '/gallery'
+    | '/admin'
+    | '/api/public/drive-image'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/auth'
+    | '/funders'
+    | '/gallery'
+    | '/_authenticated/admin'
+    | '/api/public/drive-image'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
   FundersRoute: typeof FundersRoute
   GalleryRoute: typeof GalleryRoute
   ApiPublicDriveImageRoute: typeof ApiPublicDriveImageRoute
@@ -85,12 +131,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FundersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/api/public/drive-image': {
       id: '/api/public/drive-image'
@@ -102,8 +169,21 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
   FundersRoute: FundersRoute,
   GalleryRoute: GalleryRoute,
   ApiPublicDriveImageRoute: ApiPublicDriveImageRoute,

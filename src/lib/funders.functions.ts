@@ -8,6 +8,7 @@ export type Funder = {
   description: string | null;
   websiteUrl: string | null;
   category: string | null;
+  logoUrl: string | null;
 };
 
 export const getFunders = createServerFn({ method: "GET" }).handler(async (): Promise<Funder[]> => {
@@ -27,12 +28,21 @@ export const getFunders = createServerFn({ method: "GET" }).handler(async (): Pr
 
   const { data, error } = await supabasePublic
     .from("funders")
-    .select("id, name, description, website_url, category")
+    .select("id, name, description, website_url, category, logo_path")
     .eq("is_active", true)
     .order("sort_order", { ascending: true })
     .order("name", { ascending: true });
 
   if (error) throw new Error(error.message);
+
+  const paths = (data ?? []).map((r) => r.logo_path).filter((p): p is string => !!p);
+  const urls = new Map<string, string>();
+  if (paths.length) {
+    const { data: signed } = await supabasePublic.storage
+      .from("funder-logos")
+      .createSignedUrls(paths, 60 * 60 * 24);
+    signed?.forEach((s) => s.path && s.signedUrl && urls.set(s.path, s.signedUrl));
+  }
 
   return (data ?? []).map((row) => ({
     id: row.id,
@@ -40,5 +50,6 @@ export const getFunders = createServerFn({ method: "GET" }).handler(async (): Pr
     description: row.description,
     websiteUrl: row.website_url,
     category: row.category,
+    logoUrl: row.logo_path ? (urls.get(row.logo_path) ?? null) : null,
   }));
 });

@@ -1,0 +1,3 @@
+- [x] Funder admin panel
+- [x] AI draft
+- [x] Logos
