@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FundersRouteImport } from './routes/funders'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiPublicDriveImageRouteImport } from './routes/api/public/drive-image'
 
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FundersRoute = FundersRouteImport.update({
+  id: '/funders',
+  path: '/funders',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,30 +37,34 @@ const ApiPublicDriveImageRoute = ApiPublicDriveImageRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/funders': typeof FundersRoute
   '/gallery': typeof GalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/gallery' | '/api/public/drive-image'
+  fullPaths: '/' | '/funders' | '/gallery' | '/api/public/drive-image'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/gallery' | '/api/public/drive-image'
-  id: '__root__' | '/' | '/gallery' | '/api/public/drive-image'
+  to: '/' | '/funders' | '/gallery' | '/api/public/drive-image'
+  id: '__root__' | '/' | '/funders' | '/gallery' | '/api/public/drive-image'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FundersRoute: typeof FundersRoute
   GalleryRoute: typeof GalleryRoute
   ApiPublicDriveImageRoute: typeof ApiPublicDriveImageRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/funders': {
+      id: '/funders'
+      path: '/funders'
+      fullPath: '/funders'
+      preLoaderRoute: typeof FundersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FundersRoute: FundersRoute,
   GalleryRoute: GalleryRoute,
   ApiPublicDriveImageRoute: ApiPublicDriveImageRoute,
 }
