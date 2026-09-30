@@ -1,0 +1,2 @@
+INSERT INTO public.funders (name, description, website_url, category, sort_order)
+VALUES ('Test Supporter', 'Temporary test entry used to verify the Funders page.', 'https://example.org', 'Test', 999);
