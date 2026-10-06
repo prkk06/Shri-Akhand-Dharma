@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
-import heroBg from "@/assets/hero-sacred-skyline.jpg";
+import heroBg from "@/assets/hero-banner.jpg";
 import ContactForm from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
