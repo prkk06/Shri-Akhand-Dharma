@@ -102,7 +102,7 @@ function FundersPage() {
         )}
 
         {funders.length > 0 && (
-          <div className="mt-10 max-w-2xl overflow-hidden rounded-lg border border-border bg-card">
+          <div className="mt-10 max-w-lg overflow-hidden rounded-lg border border-border bg-card">
             <table className="w-full table-fixed text-left">
               <colgroup>
                 <col className="w-1/3" />
