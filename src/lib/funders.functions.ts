@@ -4,6 +4,7 @@ export type Funder = {
   id: string;
   name: string;
   amount: string;
+  location: string;
 };
 
 const DRIVE = "https://connector-gateway.lovable.dev/google_drive/drive/v3";
@@ -62,6 +63,7 @@ export const getFunders = createServerFn({ method: "GET" }).handler(async (): Pr
   const head = rows[0].map((h) => h.trim().toLowerCase());
   const iName = head.indexOf("name");
   const iAmount = head.indexOf("amount");
+  const iLocation = head.indexOf("location");
   const iVisible = head.indexOf("isvisible");
   if (iName < 0 || iVisible < 0) return [];
 
@@ -72,5 +74,6 @@ export const getFunders = createServerFn({ method: "GET" }).handler(async (): Pr
       id: String(i),
       name: r[iName].trim(),
       amount: iAmount >= 0 ? (r[iAmount] ?? "").trim() : "",
+      location: iLocation >= 0 ? (r[iLocation] ?? "").trim() : "",
     }));
 });
