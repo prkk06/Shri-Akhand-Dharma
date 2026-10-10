@@ -60,7 +60,17 @@ function FundersPage() {
       </header>
 
       <main className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
-        <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[11px] sm:text-xs font-medium">
+        <div className="max-w-3xl rounded-lg border border-gold/50 bg-gold/5 px-5 py-5 sm:px-7 sm:py-6">
+          <p className="font-display text-lg sm:text-xl font-semibold text-navy">
+            With heartfelt gratitude to our donors
+          </p>
+          <p className="mt-2 text-[15px] sm:text-[16px] leading-relaxed text-charcoal/80 text-justify">
+            Every act of service carried out in the name of the Foundation begins with a donor's
+            generosity. We thank each of you sincerely — your trust and support allow us to serve
+            with dignity, and to keep our commitments to those who need us most.
+          </p>
+        </div>
+        <div className="mt-10 flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[11px] sm:text-xs font-medium">
           <span className="h-px w-6 sm:w-8 bg-gold" />
           <span>Funders</span>
         </div>
@@ -93,16 +103,21 @@ function FundersPage() {
 
         {funders.length > 0 && (
           <div className="mt-10 max-w-2xl overflow-hidden rounded-lg border border-border bg-card">
-            <table className="w-full text-left">
+            <table className="w-full table-fixed text-left">
+              <colgroup>
+                <col className="w-1/3" />
+                <col className="w-1/3" />
+                <col className="w-1/3" />
+              </colgroup>
               <thead className="bg-navy text-navy-foreground">
                 <tr>
-                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap">
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase">
                     Name
                   </th>
-                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap">
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase">
                     Location
                   </th>
-                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap text-right">
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase text-right">
                     Amount (INR)
                   </th>
                 </tr>
@@ -110,9 +125,7 @@ function FundersPage() {
               <tbody>
                 {funders.map((f) => (
                   <tr key={f.id} className="border-t border-border">
-                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-navy whitespace-nowrap">
-                      {f.name}
-                    </td>
+                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-navy">{f.name}</td>
                     <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80">{f.location}</td>
                     <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80 text-right whitespace-nowrap">
                       {f.amount}
