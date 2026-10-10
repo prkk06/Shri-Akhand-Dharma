@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { ArrowLeft, ExternalLink, HandHeart } from "lucide-react";
+import { ArrowLeft, HandHeart } from "lucide-react";
 
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import { getFunders } from "@/lib/funders.functions";
