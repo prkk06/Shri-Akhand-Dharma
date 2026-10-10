@@ -96,9 +96,13 @@ function FundersPage() {
             <table className="w-full text-left">
               <thead className="bg-navy text-navy-foreground">
                 <tr>
-                  <th className="px-3 sm:px-4 py-3 font-display text-sm tracking-[0.12em] uppercase">Name</th>
-                  <th className="px-3 sm:px-4 py-3 font-display text-sm tracking-[0.12em] uppercase">Location</th>
-                  <th className="px-3 sm:px-4 py-3 font-display text-sm tracking-[0.12em] uppercase text-right">
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap">
+                    Name
+                  </th>
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap">
+                    Location
+                  </th>
+                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase whitespace-nowrap text-right">
                     Amount (INR)
                   </th>
                 </tr>
@@ -106,9 +110,11 @@ function FundersPage() {
               <tbody>
                 {funders.map((f) => (
                   <tr key={f.id} className="border-t border-border">
-                    <td className="px-3 sm:px-4 py-3 text-[16px] text-navy">{f.name}</td>
-                    <td className="px-3 sm:px-4 py-3 text-[16px] text-charcoal/80">{f.location}</td>
-                    <td className="px-3 sm:px-4 py-3 text-[16px] text-charcoal/80 text-right whitespace-nowrap">
+                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-navy whitespace-nowrap">
+                      {f.name}
+                    </td>
+                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80">{f.location}</td>
+                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80 text-right whitespace-nowrap">
                       {f.amount}
                     </td>
                   </tr>
