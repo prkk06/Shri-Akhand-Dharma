@@ -1,2 +1,2 @@
 
-- The homepage body lives in src/components/HomePageContent.tsx, shared by routes "/" and "/trust" — edit that file for homepage content; /trust is intentionally absent from the header menu.
+- The Foundation homepage body lives in src/components/HomePageContent.tsx (route "/"). The Trust page (route "/trust") is fully separate: all its text, nav links, image sources and Drive slideshow folder are in src/trust/content.ts, rendered by src/trust/TrustPage.tsx — edit each independently. /trust is intentionally absent from the header menu.

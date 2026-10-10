@@ -1,13 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import HomePageContent from "@/components/HomePageContent";
+import TrustPage from "@/trust/TrustPage";
 
-// Standalone Trust page — a mirror of the homepage for connecting the
-// trust's own domain. Deliberately NOT listed in the header menu
-// (see src/components/SiteHeader.tsx NAV_LINKS). The only difference is
-// wording: this page reads "Trust" where the main site reads "Foundation".
-function TrustPage() {
-  return <HomePageContent orgSuffix="Trust" />;
-}
+// Standalone Trust page (not in the header menu). Body, text and images live in
+// src/trust/ — separate from the Foundation homepage.
 
 export const Route = createFileRoute("/trust")({
   head: () => ({

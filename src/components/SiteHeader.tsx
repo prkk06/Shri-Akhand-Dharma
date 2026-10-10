@@ -14,13 +14,8 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/#contact" },
 ];
 
-export default function SiteHeader({
-  overlay = false,
-  orgSuffix = "Foundation",
-}: {
-  overlay?: boolean;
-  orgSuffix?: string;
-}) {
+export default function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+  const orgSuffix = "Foundation";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
