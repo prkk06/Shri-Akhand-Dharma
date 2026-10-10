@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowLeft, HandHeart } from "lucide-react";
 
-import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
+import SiteHeader from "@/components/SiteHeader";
 import { getFunders } from "@/lib/funders.functions";
 
 export const Route = createFileRoute("/funders")({
@@ -36,28 +36,7 @@ function FundersPage() {
 
   return (
     <div className="min-h-screen bg-ivory text-charcoal antialiased">
-      <header className="bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 h-16 md:h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 min-w-0">
-            <img
-              src={logoImg.url}
-              alt="Shri Akhand Dharma Foundation emblem"
-              className="w-10 h-10 md:w-11 md:h-11 rounded-full ring-1 ring-gold/40 object-cover flex-none"
-            />
-            <div className="leading-tight min-w-0">
-              <div className="font-display text-[13px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] truncate">
-                SHRI AKHAND DHARMA
-              </div>
-              <div className="font-display text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
-                FOUNDATION
-              </div>
-            </div>
-          </Link>
-          <Link to="/" className="inline-flex items-center gap-2 text-sm hover:text-gold transition-colors">
-            <ArrowLeft size={16} /> Home
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
         <div className="max-w-3xl rounded-lg border border-gold/50 bg-gold/5 px-5 py-5 sm:px-7 sm:py-6">
