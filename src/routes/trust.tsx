@@ -30,5 +30,5 @@ export const Route = createFileRoute("/trust")({
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/trust" }],
   }),
-  component: HomePageContent,
+  component: TrustPage,
 });
