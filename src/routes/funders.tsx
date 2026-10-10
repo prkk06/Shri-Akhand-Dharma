@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { ArrowLeft, ExternalLink, HandHeart } from "lucide-react";
+import { ArrowLeft, HandHeart } from "lucide-react";
 
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import { getFunders } from "@/lib/funders.functions";
@@ -92,48 +92,23 @@ function FundersPage() {
         )}
 
         {funders.length > 0 && (
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {funders.map((funder) => (
-              <article
-                key={funder.id}
-                className="rounded-lg border border-border bg-card p-6 flex flex-col hover:border-gold transition-colors"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 flex-none rounded-md border border-border bg-ivory flex items-center justify-center overflow-hidden">
-                    {funder.logoUrl ? (
-                      <img src={funder.logoUrl} alt={`${funder.name} logo`} className="max-w-full max-h-full object-contain p-1.5" loading="lazy" />
-                    ) : (
-                      <span className="font-display text-xl font-semibold text-gold">
-                        {funder.name.charAt(0).toUpperCase()}
-                      </span>
-                    )}
-                  </div>
-                  <div className="min-w-0">
-                    {funder.category && (
-                      <span className="inline-block rounded-full border border-gold/40 text-gold text-[11px] uppercase tracking-[0.15em] px-3 py-1">
-                        {funder.category}
-                      </span>
-                    )}
-                    <h2 className="mt-2 font-display text-lg font-semibold text-navy">{funder.name}</h2>
-                  </div>
-                </div>
-                {funder.description && (
-                  <p className="mt-2 text-[15px] leading-relaxed text-charcoal/80 text-justify">
-                    {funder.description}
-                  </p>
-                )}
-                {funder.websiteUrl && (
-                  <a
-                    href={funder.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm text-navy hover:text-gold transition-colors"
-                  >
-                    Visit website <ExternalLink size={14} />
-                  </a>
-                )}
-              </article>
-            ))}
+          <div className="mt-10 max-w-3xl overflow-hidden rounded-lg border border-border bg-card">
+            <table className="w-full text-left">
+              <thead className="bg-navy text-navy-foreground">
+                <tr>
+                  <th className="px-4 sm:px-6 py-3 font-display text-sm tracking-[0.15em] uppercase">Name</th>
+                  <th className="px-4 sm:px-6 py-3 font-display text-sm tracking-[0.15em] uppercase text-right">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {funders.map((f) => (
+                  <tr key={f.id} className="border-t border-border">
+                    <td className="px-4 sm:px-6 py-3 text-[16px] text-navy font-medium">{f.name}</td>
+                    <td className="px-4 sm:px-6 py-3 text-[16px] text-charcoal/80 text-right whitespace-nowrap">{f.amount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </main>
