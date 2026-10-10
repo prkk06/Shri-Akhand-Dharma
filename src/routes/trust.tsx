@@ -420,7 +420,6 @@ function TrustCarousel() {
 }
 
 // ============================== PAGE =========================================
-  brandLine1,
 
 function SectionLabel({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
   return (
