@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { ArrowLeft, HandHeart } from "lucide-react";
+import { useState } from "react";
+import { ArrowDown, ArrowUp, HandHeart } from "lucide-react";
 
 import SiteHeader from "@/components/SiteHeader";
 import { getFunders } from "@/lib/funders.functions";
@@ -33,6 +34,11 @@ function FundersPage() {
   const fundersQuery = useQuery({ queryKey: ["funders"], queryFn: () => fetchFunders() });
 
   const funders = fundersQuery.data ?? [];
+  const [sortDesc, setSortDesc] = useState(true);
+  const toNum = (a: string) => Number(a.replace(/[^0-9.]/g, "")) || 0;
+  const sortedFunders = [...funders].sort((a, b) =>
+    sortDesc ? toNum(b.amount) - toNum(a.amount) : toNum(a.amount) - toNum(b.amount),
+  );
 
   return (
     <div className="min-h-screen bg-ivory text-charcoal antialiased">
@@ -92,16 +98,26 @@ function FundersPage() {
                   <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase">
                     Name
                   </th>
-                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase text-right">
-                    Amount (INR)
+                  <th
+                    className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase text-left"
+                    aria-sort={sortDesc ? "descending" : "ascending"}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setSortDesc((d) => !d)}
+                      className="inline-flex items-center gap-1 uppercase hover:text-gold"
+                    >
+                      Amount (INR)
+                      {sortDesc ? <ArrowDown size={14} /> : <ArrowUp size={14} />}
+                    </button>
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {funders.map((f) => (
+                {sortedFunders.map((f) => (
                   <tr key={f.id} className="border-t border-border">
                     <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-navy">{f.name}</td>
-                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80 text-right whitespace-nowrap">
+                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80 text-left whitespace-nowrap">
                       {f.amount}
                     </td>
                   </tr>
