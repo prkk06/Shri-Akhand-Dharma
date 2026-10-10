@@ -7,6 +7,7 @@ export type Funder = {
 };
 
 const DRIVE = "https://connector-gateway.lovable.dev/google_drive/drive/v3";
+const FUNDERS_SHEET_ID_DEFAULT = "116COIMzyGOGNGEV7uu76unfXhFcU77d9ZYAEV3sO-NM";
 
 function parseCsv(text: string): string[][] {
   const rows: string[][] = [];
@@ -38,7 +39,7 @@ export const getFunders = createServerFn({ method: "GET" }).handler(async (): Pr
   if (!lovableKey || !driveKey) throw new Error("Google Drive is not connected");
   const headers = { Authorization: `Bearer ${lovableKey}`, "X-Connection-Api-Key": driveKey };
 
-  let sheetId = process.env.FUNDERS_SHEET_ID;
+  let sheetId: string | undefined = process.env.FUNDERS_SHEET_ID || FUNDERS_SHEET_ID_DEFAULT;
   if (!sheetId) {
     const url = new URL(`${DRIVE}/files`);
     url.searchParams.set(
