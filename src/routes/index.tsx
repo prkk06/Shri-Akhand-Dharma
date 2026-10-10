@@ -3,7 +3,7 @@ import { Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import heroBg from "@/assets/hero-banner.jpg";
 import ContactForm from "@/components/ContactForm";
-import SiteHeader from "@/components/SiteHeader";
+import SiteHeader, { NAV_LINKS } from "@/components/SiteHeader";
 import HomeCarousel from "@/components/HomeCarousel";
 
 export const Route = createFileRoute("/")({
@@ -388,7 +388,7 @@ function Index() {
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Navigate</div>
               <ul className="mt-5 grid grid-cols-2 gap-2 text-ivory/85 text-[15px] sm:text-sm">
-                {nav.map((n) => (
+                {NAV_LINKS.map((n) => (
                   <li key={n.href}><a href={n.href} className="hover:text-gold">{n.label}</a></li>
                 ))}
               </ul>
