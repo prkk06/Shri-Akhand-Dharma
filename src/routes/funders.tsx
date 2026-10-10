@@ -81,20 +81,16 @@ function FundersPage() {
         )}
 
         {funders.length > 0 && (
-          <div className="mt-10 max-w-lg overflow-hidden rounded-lg border border-border bg-card">
+          <div className="mt-10 max-w-sm overflow-hidden rounded-lg border border-border bg-card">
             <table className="w-full table-fixed text-left">
               <colgroup>
-                <col className="w-1/3" />
-                <col className="w-1/3" />
-                <col className="w-1/3" />
+                <col className="w-1/2" />
+                <col className="w-1/2" />
               </colgroup>
               <thead className="bg-navy text-navy-foreground">
                 <tr>
                   <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase">
                     Name
-                  </th>
-                  <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase">
-                    Location
                   </th>
                   <th className="px-2 sm:px-4 py-3 font-display text-[11px] sm:text-sm tracking-[0.08em] sm:tracking-[0.12em] uppercase text-right">
                     Amount (INR)
@@ -105,7 +101,6 @@ function FundersPage() {
                 {funders.map((f) => (
                   <tr key={f.id} className="border-t border-border">
                     <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-navy">{f.name}</td>
-                    <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80">{f.location}</td>
                     <td className="px-2 sm:px-4 py-3 text-[13px] sm:text-[16px] text-charcoal/80 text-right whitespace-nowrap">
                       {f.amount}
                     </td>
