@@ -41,9 +41,16 @@ export default function HomeCarousel() {
   const go = (d: number) => setIndex((i) => (i + d < 0 ? maxIndex : i + d > maxIndex ? 0 : i + d));
 
   return (
-    <section aria-label="Photo highlights" className="bg-ivory py-12 sm:py-16">
+    <section
+      aria-label="Photo highlights"
+      className="bg-ivory pt-12 sm:pt-16 pb-0 -mb-4 sm:-mb-8"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="relative">
+        <h2 className="text-center font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-gold tracking-wide">
+          Our Service in Action
+        </h2>
+        <div className="mx-auto mt-4 sm:mt-5 h-px w-16 sm:w-20 bg-gold" />
+        <div className="relative mt-8 sm:mt-10">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-out"
@@ -88,7 +95,7 @@ export default function HomeCarousel() {
           )}
         </div>
         {maxIndex > 0 && (
-          <div className="flex justify-center gap-2 pt-6">
+          <div className="flex justify-center gap-2 pt-4">
             {Array.from({ length: maxIndex + 1 }).map((_, i) => (
               <button
                 key={i}
