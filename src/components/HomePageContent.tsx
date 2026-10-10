@@ -47,11 +47,16 @@ function SectionLabel({ children, center = false }: { children: React.ReactNode;
   );
 }
 
-export default function HomePageContent() {
+// `orgSuffix` lets the same content read as "Foundation" on the main site
+// and "Trust" on the standalone /trust page.
+export default function HomePageContent({ orgSuffix = "Foundation" }: { orgSuffix?: string }) {
+  const org = `Shri Akhand Dharma ${orgSuffix}`;
+
+
 
   return (
     <div className="min-h-screen bg-ivory text-charcoal antialiased">
-      <SiteHeader overlay />
+      <SiteHeader overlay orgSuffix={orgSuffix} />
 
       {/* HERO */}
       <section
@@ -76,14 +81,14 @@ export default function HomePageContent() {
             <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl tracking-wide">
               Shri Akhand
               <br />
-              <span className="text-gold">Dharma Foundation</span>
+              <span className="text-gold">Dharma {orgSuffix}</span>
             </h1>
             <p className="mt-6 sm:mt-8 font-display text-xl sm:text-xl md:text-2xl text-ivory/90 tracking-wide">
               Empowering lives through faith, service and compassion.
             </p>
             <p className="mt-5 sm:mt-7 text-base sm:text-base md:text-lg text-ivory/80 leading-relaxed max-w-2xl">
               A non-profit organisation dedicated to empowering communities through skill development, education,
-              social welfare and self-reliant livelihood initiatives. The Foundation works to promote inclusive growth
+              social welfare and self-reliant livelihood initiatives. The {orgSuffix} works to promote inclusive growth
               and improve the quality of life for underprivileged individuals through impactful programmes and
               partnerships.
             </p>
@@ -126,24 +131,23 @@ export default function HomePageContent() {
             <SectionLabel>About</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy leading-tight">
               About Shri Akhand
-              <br className="hidden sm:block" /> Dharma Foundation
+              <br className="hidden sm:block" /> Dharma {orgSuffix}
             </h2>
             <div className="mt-6 sm:mt-8 h-px w-16 bg-gold" />
           </div>
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              Shri Akhand Dharma Foundation is a non-profit organisation dedicated to fostering a compassionate,
-              inclusive and resilient society, guided by the enduring values of humanity, service and integrity.
+              {org} is a non-profit organisation dedicated to fostering a compassionate, inclusive and resilient
+              society, guided by the enduring values of humanity, service and integrity.
             </p>
             <p>
-              The Foundation works to uplift underserved communities through impactful initiatives in education,
+              The {orgSuffix} works to uplift underserved communities through impactful initiatives in education,
               healthcare, poverty alleviation, environmental conservation and social welfare.
             </p>
             <p>
-              By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma
-              Foundation is committed to creating meaningful and lasting social impact. Through collaboration,
-              transparency and selfless service, we strive to build a future where every individual can live with
-              dignity, equality and hope.
+              By empowering individuals, supporting families and strengthening communities, {org} is committed to
+              creating meaningful and lasting social impact. Through collaboration, transparency and selfless
+              service, we strive to build a future where every individual can live with dignity, equality and hope.
             </p>
 
           </div>
@@ -190,7 +194,7 @@ export default function HomePageContent() {
             <SectionLabel center>Principles</SectionLabel>
             <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Core Values</h2>
             <p className="mt-5 sm:mt-6 text-[17px] sm:text-base text-charcoal/75 leading-relaxed">
-              Shri Akhand Dharma Foundation is guided by a strong set of core values that define its mission, actions
+              {org} is guided by a strong set of core values that define its mission, actions
               and long-term vision for serving society with dedication and integrity.
             </p>
 
@@ -222,7 +226,7 @@ export default function HomePageContent() {
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
             <p>
-              At Shri Akhand Dharma Foundation, we believe true progress is rooted in compassion, selfless service,
+              At {org}, we believe true progress is rooted in compassion, selfless service,
               integrity and respect for humanity. Our initiatives apply these values through sustainable,
               community-driven efforts in education, healthcare, environmental care, cultural preservation and social
               empowerment.
@@ -249,7 +253,7 @@ export default function HomePageContent() {
               Partner With Us
             </h2>
             <p className="mt-6 sm:mt-8 text-charcoal/85 leading-relaxed text-[17px] sm:text-base">
-              The Foundation welcomes support and participation from individuals and organisations who share our
+              The {orgSuffix} welcomes support and participation from individuals and organisations who share our
               commitment to build infrastructure, networks and an ecosystem that serve society and future generations.
             </p>
 
@@ -281,7 +285,7 @@ export default function HomePageContent() {
           <h2 className="mt-5 sm:mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-navy">Connect With Us</h2>
           <div className="mt-6 sm:mt-8 mx-auto h-px w-16 sm:w-20 bg-gold" />
           <p className="mt-8 sm:mt-10 text-[17px] sm:text-lg leading-relaxed text-charcoal/85">
-            At Shri Akhand Dharma Foundation, we believe that meaningful impact is achieved through collective action.
+            At {org}, we believe that meaningful impact is achieved through collective action.
             We invite individuals, organisations, corporate partners, educational institutions and development agencies
             to collaborate with us through volunteering, donations or knowledge sharing for advancing education,
             healthcare, environmental sustainability and community well-being.
@@ -340,7 +344,7 @@ export default function HomePageContent() {
                     SHRI AKHAND DHARMA
                   </div>
                   <div className="font-display text-sm md:text-base tracking-[0.2em] text-gold">
-                    FOUNDATION
+                    {orgSuffix.toUpperCase()}
                   </div>
                 </div>
               </div>
@@ -372,7 +376,7 @@ export default function HomePageContent() {
               FAITH IN VALUES · SERVICE TO HUMANITY · COMMITMENT TO NATION
             </div>
             <div className="text-ivory/60">
-              © {new Date().getFullYear()} Shri Akhand Dharma Foundation. All rights reserved.
+              © {new Date().getFullYear()} {org}. All rights reserved.
             </div>
           </div>
         </div>

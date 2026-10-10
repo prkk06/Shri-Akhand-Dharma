@@ -3,7 +3,12 @@ import HomePageContent from "@/components/HomePageContent";
 
 // Standalone Trust page — a mirror of the homepage for connecting the
 // trust's own domain. Deliberately NOT listed in the header menu
-// (see src/components/SiteHeader.tsx NAV_LINKS).
+// (see src/components/SiteHeader.tsx NAV_LINKS). The only difference is
+// wording: this page reads "Trust" where the main site reads "Foundation".
+function TrustPage() {
+  return <HomePageContent orgSuffix="Trust" />;
+}
+
 export const Route = createFileRoute("/trust")({
   head: () => ({
     meta: [
@@ -25,5 +30,5 @@ export const Route = createFileRoute("/trust")({
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/trust" }],
   }),
-  component: HomePageContent,
+  component: TrustPage,
 });

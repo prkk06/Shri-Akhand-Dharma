@@ -14,7 +14,13 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/#contact" },
 ];
 
-export default function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+export default function SiteHeader({
+  overlay = false,
+  orgSuffix = "Foundation",
+}: {
+  overlay?: boolean;
+  orgSuffix?: string;
+}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,7 +53,7 @@ export default function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           <a href="/" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
             <img
               src={logoImg.url}
-              alt="Shri Akhand Dharma Foundation emblem"
+              alt={`Shri Akhand Dharma ${orgSuffix} emblem`}
               className="w-10 h-10 md:w-11 md:h-11 rounded-full ring-1 ring-gold/40 object-cover flex-none"
             />
             <div className="leading-tight min-w-0">
@@ -55,7 +61,7 @@ export default function SiteHeader({ overlay = false }: { overlay?: boolean }) {
                 SHRI AKHAND DHARMA
               </div>
               <div className="font-display text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
-                FOUNDATION
+                {orgSuffix.toUpperCase()}
               </div>
             </div>
           </a>
