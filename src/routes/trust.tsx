@@ -213,14 +213,6 @@ const getTrustCarouselImages = createServerFn({ method: "GET" }).handler(
 // Header for the standalone Trust page. Menu items live in ./content.ts.
 function TrustHeader() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -229,15 +221,9 @@ function TrustHeader() {
     };
   }, [open]);
 
-  const solid = scrolled || open;
-
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        solid
-          ? "bg-navy/95 backdrop-blur-md border-b border-gold/20 shadow-[0_2px_20px_-10px_rgba(0,0,0,0.4)]"
-          : "bg-navy/40 backdrop-blur-sm"
-      } text-navy-foreground`}
+      className={`fixed top-0 inset-x-0 z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20 shadow-[0_2px_20px_-10px_rgba(0,0,0,0.4)] text-navy-foreground`}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 h-16 md:h-20 flex items-center justify-between">
         <a href="/trust" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
