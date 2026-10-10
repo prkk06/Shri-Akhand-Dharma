@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { Menu, X, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import heroBg from "@/assets/hero-banner.jpg";
 import ContactForm from "@/components/ContactForm";
+import SiteHeader, { NAV_LINKS } from "@/components/SiteHeader";
+import HomeCarousel from "@/components/HomeCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,16 +31,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const nav = [
-  { label: "About", href: "#about" },
-  { label: "Vision", href: "#vision" },
-  { label: "Values", href: "#values" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Funders", href: "/funders" },
-
-  { label: "Partner", href: "#partner" },
-  { label: "Contact", href: "#contact" },
-];
 
 const values = [
   { title: "Compassion", desc: "We serve with empathy and respect for every individual." },
@@ -83,105 +74,10 @@ function SectionLabel({ children, center = false }: { children: React.ReactNode;
 }
 
 function Index() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
 
   return (
     <div className="min-h-screen bg-ivory text-charcoal antialiased">
-      {/* NAV */}
-      <header
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled || open
-            ? "bg-navy/95 backdrop-blur-md border-b border-gold/20 shadow-[0_2px_20px_-10px_rgba(0,0,0,0.4)]"
-            : "bg-navy/40 backdrop-blur-sm"
-        } text-navy-foreground`}
-      >
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 h-16 md:h-20 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
-            <img
-              src={logoImg.url}
-              alt="Shri Akhand Dharma Foundation emblem"
-              className="w-10 h-10 md:w-11 md:h-11 rounded-full ring-1 ring-gold/40 object-cover flex-none"
-            />
-            <div className="leading-tight min-w-0">
-              <div className="font-display text-[13px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] truncate">
-                SHRI AKHAND DHARMA
-              </div>
-              <div className="font-display text-[10px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold truncate">
-                FOUNDATION
-              </div>
-            </div>
-          </a>
-
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-sm">
-            {nav.map((n) => (
-              <a key={n.href} href={n.href} className="hover:text-gold transition-colors">
-                {n.label}
-              </a>
-            ))}
-          </nav>
-
-          <a
-            href="#partner"
-            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-md bg-gold text-navy font-medium text-sm hover:bg-gold-soft transition-colors"
-          >
-            Become a Partner
-          </a>
-
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((s) => !s)}
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md text-ivory hover:text-gold transition-colors"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        <div
-          className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-out ${
-            open ? "max-h-[80vh]" : "max-h-0"
-          }`}
-        >
-          <div className="px-5 sm:px-8 pb-6 pt-2 border-t border-gold/15">
-            <nav className="flex flex-col">
-              {nav.map((n) => (
-                <a
-                  key={n.href}
-                  href={n.href}
-                  onClick={() => setOpen(false)}
-                  className="py-3 text-base text-ivory/90 hover:text-gold border-b border-gold/10 last:border-b-0"
-                >
-                  {n.label}
-                </a>
-              ))}
-            </nav>
-            <a
-              href="#partner"
-              onClick={() => setOpen(false)}
-              className="mt-5 inline-flex w-full items-center justify-center px-5 py-3 rounded-md bg-gold text-navy font-medium"
-            >
-              Become a Partner
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader overlay />
 
       {/* HERO */}
       <section
@@ -246,6 +142,8 @@ function Index() {
           Scroll
         </div>
       </section>
+
+      <HomeCarousel />
 
       {/* ABOUT */}
       <section id="about" className="section-pad bg-ivory">
@@ -490,7 +388,7 @@ function Index() {
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Navigate</div>
               <ul className="mt-5 grid grid-cols-2 gap-2 text-ivory/85 text-[15px] sm:text-sm">
-                {nav.map((n) => (
+                {NAV_LINKS.map((n) => (
                   <li key={n.href}><a href={n.href} className="hover:text-gold">{n.label}</a></li>
                 ))}
               </ul>
