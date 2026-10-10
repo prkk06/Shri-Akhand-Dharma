@@ -1,5 +1,5 @@
 // Foundation homepage content (route "/"). The Trust page has its own
-// separate content in src/trust/.
+// separate content in src/routes/trust.tsx.
 import { Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/sadt-logo-circular.png.asset.json";
 import heroBg from "@/assets/hero-banner.jpg";
