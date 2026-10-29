@@ -27,3 +27,18 @@ export const getEventPhotos = createServerFn({ method: "GET" })
     const { listEventPhotos } = await import("./gallery.server");
     return { photos: await listEventPhotos(data.folderId) };
   });
+
+/** Google Drive folder for the Trust gallery (/trust/gallery). One subfolder per event. */
+export const TRUST_GALLERY_FOLDER_ID = "1EXYDHMkSwHlJyffFem292GR7DzFn2q8L";
+
+export const getTrustGalleryEvents = createServerFn({ method: "GET" }).handler(
+  async (): Promise<GalleryEventsResult> => {
+    try {
+      const { listEvents } = await import("./gallery.server");
+      return { status: "ok", events: await listEvents(TRUST_GALLERY_FOLDER_ID) };
+    } catch (error) {
+      console.error(error);
+      return { status: "error", message: "Could not load albums from Google Drive." };
+    }
+  },
+);

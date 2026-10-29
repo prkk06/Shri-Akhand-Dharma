@@ -81,8 +81,8 @@ export async function listEventPhotos(folderId: string): Promise<DrivePhoto[]> {
   }));
 }
 
-export async function listEvents(): Promise<DriveEvent[]> {
-  const parentId = getGalleryFolderId();
+export async function listEvents(rootFolderId?: string): Promise<DriveEvent[]> {
+  const parentId = rootFolderId ?? getGalleryFolderId();
   const data = await driveJson<{ files?: Array<Record<string, any>> }>("/files", {
     q: `'${parentId}' in parents and trashed = false and mimeType = 'application/vnd.google-apps.folder'`,
     fields: "files(id,name,modifiedTime)",

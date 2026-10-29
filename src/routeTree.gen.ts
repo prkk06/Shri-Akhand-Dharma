@@ -16,6 +16,7 @@ import { Route as FundersRouteImport } from './routes/funders'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as TrustRouteImport } from './routes/trust'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
+import { Route as TrustGalleryRouteImport } from './routes/trust_.gallery'
 import { Route as ApiPublicDriveImageRouteImport } from './routes/api/public/drive-image'
 
 const IndexRoute = IndexRouteImport.update({
@@ -52,6 +53,11 @@ const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const TrustGalleryRoute = TrustGalleryRouteImport.update({
+  id: '/trust_/gallery',
+  path: '/trust/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicDriveImageRoute = ApiPublicDriveImageRouteImport.update({
   id: '/api/public/drive-image',
   path: '/api/public/drive-image',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/trust': typeof TrustRoute
   '/admin': typeof AuthenticatedAdminRoute
+  '/trust/gallery': typeof TrustGalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesByTo {
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/trust': typeof TrustRoute
   '/admin': typeof AuthenticatedAdminRoute
+  '/trust/gallery': typeof TrustGalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRoutesById {
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/trust': typeof TrustRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRoute
+  '/trust_/gallery': typeof TrustGalleryRoute
   '/api/public/drive-image': typeof ApiPublicDriveImageRoute
 }
 export interface FileRouteTypes {
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/trust'
     | '/admin'
+    | '/trust/gallery'
     | '/api/public/drive-image'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/trust'
     | '/admin'
+    | '/trust/gallery'
     | '/api/public/drive-image'
   id:
     | '__root__'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/trust'
     | '/_authenticated/admin'
+    | '/trust_/gallery'
     | '/api/public/drive-image'
   fileRoutesById: FileRoutesById
 }
@@ -125,6 +137,7 @@ export interface RootRouteChildren {
   FundersRoute: typeof FundersRoute
   GalleryRoute: typeof GalleryRoute
   TrustRoute: typeof TrustRoute
+  TrustGalleryRoute: typeof TrustGalleryRoute
   ApiPublicDriveImageRoute: typeof ApiPublicDriveImageRoute
 }
 
@@ -179,6 +192,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/trust_/gallery': {
+      id: '/trust_/gallery'
+      path: '/trust/gallery'
+      fullPath: '/trust/gallery'
+      preLoaderRoute: typeof TrustGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/drive-image': {
       id: '/api/public/drive-image'
       path: '/api/public/drive-image'
@@ -207,6 +227,7 @@ const rootRouteChildren: RootRouteChildren = {
   FundersRoute: FundersRoute,
   GalleryRoute: GalleryRoute,
   TrustRoute: TrustRoute,
+  TrustGalleryRoute: TrustGalleryRoute,
   ApiPublicDriveImageRoute: ApiPublicDriveImageRoute,
 }
 export const routeTree = rootRouteImport
