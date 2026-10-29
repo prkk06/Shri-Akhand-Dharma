@@ -62,7 +62,7 @@ const trustNavLinks = [
   { label: "About", href: "/trust#about" },
   { label: "Vision", href: "/trust#vision" },
   { label: "Values", href: "/trust#values" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Gallery", href: "/trust/gallery" },
   { label: "Funders", href: "/funders" },
   { label: "Partner", href: "/trust#partner" },
   { label: "Contact", href: "/trust#contact" },
@@ -211,7 +211,7 @@ const getTrustCarouselImages = createServerFn({ method: "GET" }).handler(
 // ============================== HEADER =======================================
 
 // Header for the standalone Trust page. Menu items live in ./content.ts.
-function TrustHeader() {
+export function TrustHeader() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
