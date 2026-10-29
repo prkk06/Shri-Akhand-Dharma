@@ -29,7 +29,7 @@ export const getEventPhotos = createServerFn({ method: "GET" })
   });
 
 /** Google Drive folder for the Trust gallery (/trust/gallery). One subfolder per event. */
-export const TRUST_GALLERY_FOLDER_ID = "1EXYDHMkSwHlJyffFem292GR7DzFn2q8L";
+export const TRUST_GALLERY_FOLDER_ID = "1oee4iiQB0WebI83SLvBYmlx0PeiJM38l";
 
 export const getTrustGalleryEvents = createServerFn({ method: "GET" }).handler(
   async (): Promise<GalleryEventsResult> => {
