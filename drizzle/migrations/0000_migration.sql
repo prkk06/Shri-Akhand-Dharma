@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Anyone can view funder logos" ON storage.objects;
+CREATE POLICY "Admins view funder logos" ON storage.objects FOR SELECT TO authenticated USING (bucket_id = 'funder-logos' AND public.has_role(auth.uid(), 'admin'));
