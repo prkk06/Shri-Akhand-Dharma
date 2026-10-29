@@ -51,7 +51,7 @@ function TrustGalleryPage() {
     <div className="min-h-screen bg-ivory text-charcoal antialiased">
       <TrustHeader />
 
-      <main className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20">
+      <main className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
         <div className="flex items-center gap-3 text-gold uppercase tracking-[0.3em] text-[11px] sm:text-xs font-medium">
           <span className="h-px w-6 sm:w-8 bg-gold" />
           <span>Gallery</span>
