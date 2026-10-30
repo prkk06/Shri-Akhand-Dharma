@@ -54,7 +54,7 @@ const trustImages = {
 };
 
 /** Google Drive folder that feeds the "Our Service in Action" slideshow. */
-const TRUST_CAROUSEL_FOLDER_ID = "1Rk9YUBpb5EZe3tRUa2Iw7qljV_uHneoh";
+const TRUST_CAROUSEL_FOLDER_ID = "1ahLqZ6IOqHNSTLOKlTwp5VRoFEquaJgG";
 const carouselTitle = "Our Service in Action";
 
 // ---- Menu (Trust page header & footer) ------------------------------------
