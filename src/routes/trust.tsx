@@ -63,7 +63,6 @@ const trustNavLinks = [
   { label: "Vision", href: "/trust#vision" },
   { label: "Values", href: "/trust#values" },
   { label: "Gallery", href: "/trust/gallery" },
-  { label: "Funders", href: "/funders" },
   { label: "Partner", href: "/trust#partner" },
   { label: "Contact", href: "/trust#contact" },
 ];
