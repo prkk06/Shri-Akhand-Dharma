@@ -622,7 +622,7 @@ function TrustPage() {
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold">
                   <Mail size={14} /> Email
                 </div>
-                <div className="mt-3 font-display text-sm sm:text-base text-navy group-hover:text-copper transition-colors whitespace-nowrap">
+                <div className="mt-3 font-display text-[13px] sm:text-sm text-navy group-hover:text-copper transition-colors whitespace-nowrap">
                   {contact.email}
                 </div>
               </a>
