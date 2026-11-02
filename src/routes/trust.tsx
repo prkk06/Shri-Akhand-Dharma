@@ -172,7 +172,7 @@ const contact = {
     "At Shri Akhand Dharma Trust, we believe that meaningful impact is achieved through collective action. We invite individuals, organisations, corporate partners, educational institutions and development agencies to collaborate with us through volunteering, donations or knowledge sharing for advancing education, healthcare, environmental sustainability and community well-being.",
     "Together, we can create lasting solutions that empower lives and strengthen communities for generations to come.",
   ],
-  email: "info@shriakhanddharma.org",
+  email: "info@shriakhanddharmatrust.org",
   officeCountry: "India",
   officeRegion: "Mathura, Uttar Pradesh",
   formTitle: "Send a Message",
