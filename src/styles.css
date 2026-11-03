@@ -132,3 +132,40 @@
   padding-block: clamp(4rem, 8vw, 7rem);
 }
 
+/* Trust-only small-screen adjustments; Foundation styling stays independent. */
+.trust-page section[id] {
+  scroll-margin-top: 6rem;
+}
+
+.trust-page h1,
+.trust-page h2,
+.trust-page h3 {
+  overflow-wrap: anywhere;
+}
+
+.trust-contact-form input,
+.trust-contact-form select,
+.trust-contact-form textarea {
+  min-width: 0;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+@media (max-width: 639px) {
+  .trust-page .section-pad {
+    padding-block: 3rem;
+  }
+
+  .trust-page p {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-page *,
+  .trust-header * {
+    transition-duration: 0ms !important;
+  }
+}
+
