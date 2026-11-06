@@ -14,7 +14,7 @@ import { Menu, X, ChevronLeft, ChevronRight, Mail, MapPin, Globe, ArrowRight } f
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import heroBanner from "@/assets/trust/hero-banner.jpg";
-import logo from "@/assets/trust/logo-ivory.png.asset.json";
+import logo from "@/assets/trust/sadt-trust-logo.png.asset.json";
 
 export const Route = createFileRoute("/trust")({
   head: () => ({
