@@ -19,19 +19,19 @@ import logo from "@/assets/trust/sadt-trust-logo.png.asset.json";
 export const Route = createFileRoute("/trust")({
   head: () => ({
     meta: [
-      { title: "Shri Akhand Dharma Trust — Preserving Heritage, Serving Humanity" },
+      { title: "Shri Akhand Dharma Trust — Preserving Heritage. Inspiring Generations. Serving Humanity" },
       {
         name: "description",
         content:
-          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
+          "Shri Akhand Dharma Trust — A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage, strengthening communities and supporting humanitarian initiatives through collective participation and responsible development.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
-      { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { property: "og:description", content: "Empowering lives through faith, service and compassion." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://shriakhanddharmatrust.org/trust" },
       { name: "twitter:title", content: "Shri Akhand Dharma Trust" },
-      { name: "twitter:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
+      { name: "twitter:description", content: "Empowering lives through faith, service and compassion." },
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/trust" }],
   }),
@@ -73,7 +73,7 @@ const hero = {
   titleLine2: "Dharma Trust",
   tagline: "Preserving Heritage. Inspiring Generations. Serving Humanity.",
   intro:
-    "A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage, strengthening communities and supporting humanitarian initiatives through collective participation and responsible development.",
+    "A non-profit organisation dedicated to empowering communities through skill development, education, social welfare and self-reliant livelihood initiatives. The Trust works to promote inclusive growth and improve the quality of life for underprivileged individuals through impactful programmes and partnerships. A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage, strengthening communities and supporting humanitarian initiatives through collective participation and responsible development.",
   buttons: {
     vision: "Explore the Vision",
     partner: "Become a Partner",
@@ -130,7 +130,7 @@ const valuesSection = {
 // ---- Significance ---------------------------------------------------------
 const significance = {
   label: "Significance",
-  title: "Why This Initiative Matters",
+  title: "Why These Initiatives Matter",
   paragraphs: [
     "India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a rapidly changing world, preserving these values while making them accessible to future generations has become increasingly important.",
     "Shri Akhand Dharma Trust aims to bridge heritage and modernity through sustainable institutions that support spirituality, community wellbeing, education and cultural continuity.",
@@ -164,6 +164,7 @@ const contact = {
   title: "Connect With Us",
   paragraphs: [
     "We welcome conversations, partnerships and support from individuals and organisations who believe in preserving heritage, strengthening communities and building meaningful institutions rooted in service and dharma.",
+    "Together, we can create lasting solutions that empower lives and strengthen communities for generations to come.",
   ],
   email: "info@shriakhanddharmatrust.org",
   officeCountry: "India",
@@ -173,11 +174,10 @@ const contact = {
 
 const footer = {
   blurb:
-    "A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.",
-  registrationNumber: "161/2026-27",
+    "To drive inclusive and responsible development through strategic partnerships that create lasting social impact.",
   address: "7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)",
   phones: "+91 92174 96213 · +91 96270 77778",
-  motto: "FAITH · PEACE · MEANING · CONNECTION",
+  motto: "FAITH IN VALUES · SERVICE TO HUMANITY · COMMITMENT TO NATION",
 };
 
 // ============================== SLIDESHOW DATA ===============================
@@ -671,9 +671,6 @@ function TrustPage() {
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">{footer.blurb}</p>
-              <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
-                Trust Registration No.: <span className="text-gold">{footer.registrationNumber}</span>
-              </p>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
