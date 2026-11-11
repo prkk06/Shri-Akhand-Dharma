@@ -19,23 +19,19 @@ import logo from "@/assets/trust/sadt-trust-logo.png.asset.json";
 export const Route = createFileRoute("/trust")({
   head: () => ({
     meta: [
-      { title: "Shri Akhand Dharma Trust — Empowering Lives Through Service" },
+      { title: "Shri Akhand Dharma Trust — Preserving Heritage, Serving Humanity" },
       {
         name: "description",
         content:
-          "Shri Akhand Dharma Trust — a non-profit organisation empowering communities through skill development, education, healthcare, social welfare and self-reliant livelihood initiatives across India.",
+          "A spiritual, cultural and charitable institution preserving India's heritage and supporting humanitarian initiatives across temples, gurudwaras and community institutions.",
       },
       { property: "og:title", content: "Shri Akhand Dharma Trust" },
-      { property: "og:description", content: "Empowering lives through faith, service and compassion." },
+      { property: "og:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://shriakhanddharmatrust.org/trust" },
-      { property: "og:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
       { name: "twitter:title", content: "Shri Akhand Dharma Trust" },
-      { name: "twitter:description", content: "Empowering lives through faith, service and compassion." },
-      { name: "twitter:image", content: "https://shriakhanddharmatrust.org/og-image.png" },
+      { name: "twitter:description", content: "Preserving Heritage. Inspiring Generations. Serving Humanity." },
     ],
     links: [{ rel: "canonical", href: "https://shriakhanddharmatrust.org/trust" }],
   }),
@@ -75,9 +71,9 @@ const hero = {
   eyebrow: "Est. for Generations to Come",
   titleLine1: "Shri Akhand",
   titleLine2: "Dharma Trust",
-  tagline: "Empowering lives through faith, service and compassion.",
+  tagline: "Preserving Heritage. Inspiring Generations. Serving Humanity.",
   intro:
-    "A non-profit organisation dedicated to empowering communities through skill development, education, social welfare and self-reliant livelihood initiatives. The Trust works to promote inclusive growth and improve the quality of life for underprivileged individuals through impactful programmes and partnerships.",
+    "A spiritual, cultural and charitable institution dedicated to preserving India's religious heritage, strengthening communities and supporting humanitarian initiatives through collective participation and responsible development.",
   buttons: {
     vision: "Explore the Vision",
     partner: "Become a Partner",
@@ -91,27 +87,27 @@ const about = {
   titleLine1: "About Shri Akhand",
   titleLine2: "Dharma Trust",
   paragraphs: [
-    "Shri Akhand Dharma Trust is a non-profit organisation dedicated to fostering a compassionate, inclusive and resilient society, guided by the enduring values of humanity, service and integrity.",
-    "The Trust works to uplift underserved communities through impactful initiatives in education, healthcare, poverty alleviation, environmental conservation and social welfare.",
-    "By empowering individuals, supporting families and strengthening communities, Shri Akhand Dharma Trust is committed to creating meaningful and lasting social impact. Through collaboration, transparency and selfless service, we strive to build a future where every individual can live with dignity, equality and hope.",
+    "Shri Akhand Dharma Trust is committed to preserving and strengthening India's spiritual and cultural heritage by supporting the renovation, development and maintenance of temples, gurudwaras and other religious institutions across the country.",
+    "The Trust also supports NGOs and charitable organisations engaged in spiritual development, child welfare, education, humanitarian activities and community wellbeing.",
+    "With a long-term vision focused on service, heritage preservation and social responsibility, the Trust seeks to create sustainable institutions that positively impact both faith-based communities and society at large.",
   ],
 };
 
 // ---- Vision & Mission -----------------------------------------------------
 const vision = {
   label: "Our Vision",
-  title: "A Future of Dignity & Opportunity",
+  title: "A Living Heritage",
   paragraphs: [
-    "Our vision is to build a compassionate and resilient society where every individual has access to education, healthcare, dignity, and opportunity. A future where communities prosper, nature is protected, cultural heritage is preserved, and every life is empowered to thrive.",
+    "A living heritage, preserved and strengthened through the renovation, development and maintenance of temples, gurudwaras and sacred institutions — connecting tradition with future generations.",
   ],
 };
 
 const mission = {
   label: "Our Mission",
-  title: "Enriching Lives, Preserving Heritage",
+  title: "A Unified Platform",
   paragraphs: [
-    "Our mission is to enrich lives through education, healthcare, women and child empowerment, environmental conservation, animal welfare, rural development, skill enhancement, and community welfare.",
-    "With compassion, innovation, and a commitment to preserving our cultural heritage, we strive to build a better future for all.",
+    "To establish a unified and accessible platform that brings together temples, gurudwaras and spiritual institutions in one ecosystem — promoting spiritual growth, cultural preservation and community engagement.",
+    "The Trust seeks to enhance awareness among younger generations, strengthen India's religious heritage and ensure affordable access to spiritual and cultural experiences for all.",
   ],
 };
 
@@ -120,28 +116,27 @@ const valuesSection = {
   label: "Principles",
   title: "Core Values",
   intro:
-    "Shri Akhand Dharma Trust is guided by a strong set of core values that define its mission, actions and long-term vision for serving society with dedication and integrity.",
+    "Six guiding principles that shape every initiative we undertake and every institution we build.",
   items: [
-    { title: "Compassion", desc: "We serve with empathy and respect for every individual." },
-    { title: "Integrity", desc: "We uphold honesty, transparency and accountability." },
-    { title: "Service", desc: "We are committed to selfless service and social welfare." },
-    { title: "Inclusivity", desc: "We believe in equality and equal opportunities for all." },
-    { title: "Empowerment", desc: "We enable individuals and communities to become self-reliant." },
-    { title: "Sustainability", desc: "We promote responsible practices for lasting social and environmental impact." },
-    { title: "Collaboration", desc: "We work together to create meaningful and enduring change." },
+    { title: "Faith", desc: "Preserving spiritual traditions and sacred heritage with reverence." },
+    { title: "Service", desc: "Supporting communities through meaningful charitable initiatives." },
+    { title: "Unity", desc: "Bringing people, traditions and communities together as one." },
+    { title: "Heritage", desc: "Protecting India's civilisational and cultural identity for tomorrow." },
+    { title: "Integrity", desc: "Ensuring transparent, accountable and responsible governance." },
+    { title: "Sustainability", desc: "Building future-ready institutions with long-term, lasting impact." },
   ],
 };
 
 // ---- Significance ---------------------------------------------------------
 const significance = {
   label: "Significance",
-  title: "Why These Initiatives Matter",
+  title: "Why This Initiative Matters",
   paragraphs: [
-    "At Shri Akhand Dharma Trust, we believe true progress is rooted in compassion, selfless service, integrity and respect for humanity. Our initiatives apply these values through sustainable, community-driven efforts in education, healthcare, environmental care, cultural preservation and social empowerment.",
-    "By honouring heritage while embracing innovation, we work to build stronger communities and a more inclusive, compassionate and resilient future.",
+    "India's spiritual and cultural traditions represent one of the world's oldest living civilisations. In a rapidly changing world, preserving these values while making them accessible to future generations has become increasingly important.",
+    "Shri Akhand Dharma Trust aims to bridge heritage and modernity through sustainable institutions that support spirituality, community wellbeing, education and cultural continuity.",
   ],
   quote:
-    "\"Designed to transform timeless values into meaningful action, creating lasting social impact through community empowerment, responsible development and selfless service.\"",
+    "\"Designed not only to preserve tradition, but to create meaningful social impact through service, awareness, participation and responsible development.\"",
 };
 
 // ---- Partner --------------------------------------------------------------
@@ -149,21 +144,17 @@ const partner = {
   label: "Involvement",
   title: "Partner With Us",
   intro:
-    "The Trust welcomes support and participation from individuals and organisations who share our commitment to build infrastructure, networks and an ecosystem that serve society and future generations.",
+    "The Trust welcomes support and participation from individuals and organisations who share our commitment to building institutions that serve society and future generations.",
   button: "Start a Conversation",
   categories: [
-    "Philanthropists & Donors",
-    "Corporate CSR Partners",
-    "Educational Institutions",
-    "Healthcare Partners",
+    "Philanthropists",
+    "Corporate CSR Initiatives",
     "Community Leaders",
-    "Environmental Organisations",
-    "Government & Public Sector Bodies",
-    "NGOs & Civil Society Organisations",
-    "Technology & Infrastructure Partners",
-    "Volunteers & Skilled Professionals",
-    "Media & Communication Partners",
+    "Spiritual Organisations",
+    "Architects & Planners",
+    "Volunteers & Professionals",
     "Global Indian Communities",
+    "Technology & Infrastructure Partners",
   ],
 };
 
@@ -172,8 +163,7 @@ const contact = {
   label: "Get in Touch",
   title: "Connect With Us",
   paragraphs: [
-    "At Shri Akhand Dharma Trust, we believe that meaningful impact is achieved through collective action. We invite individuals, organisations, corporate partners, educational institutions and development agencies to collaborate with us through volunteering, donations or knowledge sharing for advancing education, healthcare, environmental sustainability and community well-being.",
-    "Together, we can create lasting solutions that empower lives and strengthen communities for generations to come.",
+    "We welcome conversations, partnerships and support from individuals and organisations who believe in preserving heritage, strengthening communities and building meaningful institutions rooted in service and dharma.",
   ],
   email: "info@shriakhanddharmatrust.org",
   officeCountry: "India",
@@ -183,10 +173,11 @@ const contact = {
 
 const footer = {
   blurb:
-    "To drive inclusive and responsible development through strategic partnerships that create lasting social impact.",
+    "A spiritual, cultural and charitable institution preserving India's heritage and serving humanity.",
+  registrationNumber: "161/2026-27",
   address: "7, Old Income Tax Office Compound, Brij Nagar, Mathura (281001)",
   phones: "+91 92174 96213 · +91 96270 77778",
-  motto: "FAITH IN VALUES · SERVICE TO HUMANITY · COMMITMENT TO NATION",
+  motto: "FAITH · PEACE · MEANING · CONNECTION",
 };
 
 // ============================== SLIDESHOW DATA ===============================
@@ -680,6 +671,9 @@ function TrustPage() {
                 </div>
               </div>
               <p className="mt-5 text-ivory/70 leading-relaxed text-[15px] sm:text-sm">{footer.blurb}</p>
+              <p className="mt-4 text-ivory/60 text-[13px] sm:text-xs">
+                Trust Registration No.: <span className="text-gold">{footer.registrationNumber}</span>
+              </p>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-gold">Reach</div>
